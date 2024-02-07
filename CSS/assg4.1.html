@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <style>
+        body{
+           background: url('https://c0.wallpaperflare.com/preview/90/176/837/container-port-loading-stacked.jpg') no-repeat center/cover;  
+           font-family: 'honk', sans-serif;
+           font-size: 25px;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px;
+            
+
+
+        }
+
+        table {
+            /* border: 2px solid black; */
+            background-color: rgb(244, 248, 251,0.5);
+            border-radius: 10px;
+            padding: 50px;
+            backdrop-filter: blur(3px) saturate(175%) contrast(96%);
+            box-shadow: 0 0 10px rgba(255,255,255,.2);
+        }
+
+        thead {
+            background-color: rgb(244, 248, 251,0.5);
+            backdrop-filter: blur(3px) saturate(175%) contrast(96%);
+            
+        }
+        thead:hover{
+            background-color: rgb(244, 248, 251,0.8);
+        }
+        input[type=text],input[type=number],input[type=email],input[type=number],input[type=tel], input[type="month"] {
+            width: 95%;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Protest Revolution', sans-serif;
+            font-size: 20px; 
+            box-shadow: 0 0 10px rgba(255,255,255,.2) inset;
+            border-radius: 10px;
+            background-color:transparent;
+            backdrop-filter: blur(3px) saturate(175%) brightness(100%)/contrast(96%);
+            
+        }
+        select{
+            width: 98%;
+            padding: 5px;
+            font-weight: bold;
+            font-family: 'Protest Revolution', sans-serif;
+            font-size: 20px; 
+            border-radius: 10px;
+            background-color:transparent;
+            backdrop-filter: blur(3px) saturate(175%) brightness(100%)/contrast(96%);
+            box-shadow: 0 0 10px rgba(255,255,255,.2) inset;
+        }
+        select option{
+            background-color:transparent;
+            backdrop-filter: blur(3px) saturate(175%) brightness(100%)/contrast(96%);
+            box-shadow: 0 0 10px rgba(255,255,255,.2) inset;
+        }
+        input[type=password]{
+            padding: 3px;
+            font-weight: bold;
+            font-family: 'Protest Revolution', sans-serif;
+            font-size: 20px; 
+            border-radius: 10px;
+            background-color:transparent;
+            backdrop-filter: blur(3px) saturate(175%) brightness(100%)/contrast(96%);
+            box-shadow: 0 0 10px rgba(255,255,255,.2) inset;
+        }
+        input[type='submit'] {
+            font-family: 'Protest Revolution', sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin: 10px 50px;
+            width: 80%;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(48, 154, 48);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+        input[type='submit']:hover{
+            background-color: rgb(125, 209, 125);
+            transform: scale(1.2);
+        }
+        th{
+            padding: 10px;
+            border: 1px solid rgb(42, 40, 40);
+            border-radius: 10px; 
+            font-size: 30px;
+        }
+        td{
+            padding: 10px;
+            /* border: 1px dashed rgb(42, 40, 40); */
+            border-radius: 10px; 
+        }
+       
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Contact Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text" name="address" id="address"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" name="phone" id="phone" pattern="[0-9].{10}"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address:</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="2">Product Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="price">Price:</label></td>
+                    <td><input type="number" name="price" step=".01" id="price"></td>
+                </tr>
+                <tr>
+                    <td><label for="pname">Product Name:</label></td>
+                    <td>
+                        <select name="pname" id="pname">
+                            <option value="select">select product</option>
+                            <option value="EconoBox">The Econo Box: Cost R5</option>
+                            <option value="StandardBox">The Standard Box: Cost R10</option>
+                            <option value="PremiumBox">The Premium Box: Cost R15</option>
+                            <option value="DeluxeBox">The Deluxe Box: Cost R20</option>
+                            <option value="SuperDeluxeBox">The Super Deluxe Box: Cost R25</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pnumber">Product Number:</label></td>
+                    <td><input type="number" name="pnumber" id="pnumber"></td>
+                </tr>
+                <tr>
+                    <td><label for="pquantity">Product Quantity</label></td>
+                    <td><input type="number" name="pquantity" id="pquantity" min="1"></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="2">Payment Method</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="card_type">Credit Card Type:</label></td>
+                    <td>
+                        <select name="card_type" id="card_type">
+                            <option value="select">select</option>
+                            <option value="Visa">Visa</option>
+                            <option value="MasterCard">MasterCard</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cnumber">Card Number:</label></td>
+                    <td><input type="text" name="cnumber" id="cnumber" required pattern="[0-9]{12}"></td>
+                </tr>
+                <tr>
+                    <td><label for="cvd">CVD/CVC:</label></td>
+                    <td><input type="password" name="cvd" id="cvd">&nbsp;(3 digits)</td>
+                </tr>
+                <tr>
+                    <td><label for="expiry_month">Expiry date:</label></td>
+                    <td><input type="month" name="expiry_month" id="expiry_month" required></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="2">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="billing_address">Billing Address:</label></td>
+                    <td><input type="text" name="billing_address" id="billing_address" required></td>
+                </tr>
+                <tr>
+                    <td><label for="delivery_address">Delivery Address:</label></td>
+                    <td><input type="text" name="delivery_address" id="delivery_address"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Place Order"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </form>
+
+</body>
+
+</html>
