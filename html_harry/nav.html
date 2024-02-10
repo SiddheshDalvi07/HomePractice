@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        .navbar {
+            background-color: green;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: -50px; */
+
+            /* box-sizing: border-box; */
+        }
+
+        .navbar ul {
+            overflow: visible;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            /* margin: 3px auto; */
+
+
+        }
+
+        .navbar li a {
+            padding: 8px 12px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            /* border: 2px solid red; */
+            height: 10px;
+            width: 90px;
+
+        }
+
+        .dropdown{
+            border: 10px solid white;
+        }
+        
+
+        ul li ul.dropdown li{
+            display: block;
+            clear: both;
+            padding: 20px;
+            border: 5px solid white;
+            
+        }
+        ul li  ul.dropdown{
+            top: 66px;
+            width: 70px;
+            background-color: aqua;
+            position: absolute;
+            z-index: 999;
+            display: none;
+           padding: 1px 20px;
+           
+           
+
+        }
+        ul li:hover ul.dropdown{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                
+                <li><a href="#about">About</a><ul class="dropdown">
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                </ul></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#service">Service</a></li>
+
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

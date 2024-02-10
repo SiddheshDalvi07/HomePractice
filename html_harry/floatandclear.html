@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel</title>
+    <style>
+        * { box-sizing: border-box; }
+        .container{
+          width: 900px;
+          border: 3px solid purple;
+          margin: 43px auto;
+        }
+        .item{
+            border: 10px solid red;
+            margin: 20px 10px;
+            padding: 20px 10px;
+            background: yellowgreen;
+        }
+        #box1{
+            float: left;
+            width: 41%;
+        }
+        #box2{
+            float: left;
+            /* clear: both; */
+            width: 48%;
+        }
+        #box3{
+            /* float: left; */
+            clear: both;
+            width: 95%;
+            overflow: scroll;
+            height: 150px;
+        }
+        p,h1{
+            text-align: right;
+            text-align: justify;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="box1" class="item">
+        <h1>Box Model 1</h1>
+        <p id="boxpara1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>
+    </div>
+    <div id="box2" class="item">
+        <h1>Box Model 2</h1>
+        <p id="boxpara1" class="para" >Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam at, nam neque deleniti dolorem voluptas vitae fuga nobis. Quasi adipisci facere cumque quam at minima odit tenetur porro amet totam. </p>
+    </div>
+    <div id="box3" class="item">
+        <h1>Box Model 3</h1>
+        <p id="boxpara1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus ipsa quasi recusandae ipsam cupiditate, suscipit nostrum accusantium mollitia eaque explicabo reiciendis sint, officia veniam iure aut commodi, adipisci doloribus distinctio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas iste recusandae nihil quis amet consequatur voluptatem, hic possimus facere sapiente nesciunt fugit ea. Inventore, natus! Eum suscipit nisi illum ipsam commodi aspernatur libero praesentium voluptatibus, repellendus inventore dolore consectetur! Delectus facere quis culpa distinctio nihil alias dicta explicabo tempora, voluptatibus nostrum fuga dolor nobis? Tempora quasi tempore maxime. Qui animi aperiam blanditiis iure sequi, sit enim placeat possimus doloremque dignissimos ad, cum quasi nobis nihil consequuntur. Deserunt dolore illum, facere repellat pariatur voluptatibus minima voluptatem distinctio voluptatum ullam ea labore accusantium quaerat dolorem repellendus, aut veritatis minus incidunt! Ea.</p>
+    </div>
+    <div id="box3" class="item">
+        <h1>Box Model 3</h1>
+        <p id="boxpara1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit </p>
+    </div>
+</div>
+</body>
+</html>

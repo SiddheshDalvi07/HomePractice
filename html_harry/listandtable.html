@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list and tables</title>
+    <style>
+        ul>ul>li{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Main1</li>
+        <ul>
+            <li>main1.1</li>
+            <li>main1.2</li>
+            <li>main1.3</li>
+        </ul>
+        <li>Main2</li>
+        <li>Main3</li>
+    </ul>
+
+
+    <table border="1" cellspacing="5" cellpadding="10">
+        <thead>
+            <tr>
+                <th>empname</th>
+                <th>empid</th>
+                <th>desgination</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sid</td>
+                <td>1</td>
+                <td>sw devl</td>
+            </tr>
+            <tr>
+                <td colspan="2">sid</td>
+                <td rowspan="2">sw devl</td>
+            </tr>
+            <tr>
+                <td>sid</td>
+                <td>1</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
