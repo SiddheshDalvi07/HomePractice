@@ -19,6 +19,7 @@
         a:hover{
             color: black;
             background-color: blue;
+            transform: scale(1.5);
         }
         a:visited{
             color: yellow;
@@ -37,6 +38,13 @@
             
             
         }
+        span{
+            color: red;
+        }
+        span:hover{
+            color: blueviolet;
+            transform: scale(1.5);
+        }
         .btn:active{
             color: green;
             background-color: aqua;
@@ -46,7 +54,7 @@
 <body>
     <div class="container" id="cont1">
         <h3>heading</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis minima fuga nihil? Quibusdam fugiat dignissimos in nisi nostrum ipsam eius velit consequuntur optio inventore rerum quis, cumque quod voluptate repellendus fuga suscipit illum! Explicabo voluptatum nesciunt dignissimos fuga voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit.</span> Debitis veritatis minima fuga nihil? Quibusdam fugiat dignissimos in nisi nostrum ipsam eius velit consequuntur optio inventore rerum quis, cumque quod voluptate repellendus fuga suscipit illum! Explicabo voluptatum nesciunt dignissimos fuga voluptas.</p>
     <a href="https://www.google.com/" class="btn">read more</a>
     <button class="btn">contact us</button>
     <button class="btn"><a href="https://www.google.com/" target="_blank">google</a></button>

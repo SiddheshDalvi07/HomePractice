@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navigation</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%; /* Ensures the header takes up the full width */
+            height: 50px; /* Set the height of the header */
+        }
+
         .navbar {
             background-color: green;
             border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* padding: -50px; */
-
-            /* box-sizing: border-box; */
+            height: 100%; /* Make the navbar height same as header */
         }
 
         .navbar ul {
@@ -24,9 +34,6 @@
         .navbar li {
             float: left;
             list-style: none;
-            /* margin: 3px auto; */
-
-
         }
 
         .navbar li a {
@@ -34,60 +41,58 @@
             text-decoration: none;
             display: flex;
             justify-content: center;
-            /* align-items: center; */
-            /* border: 2px solid red; */
-            height: 10px;
+            height: 100%;
             width: 90px;
-
         }
 
-        .dropdown{
+        .dropdown {
             border: 10px solid white;
         }
-        
 
-        ul li ul.dropdown li{
+        ul li ul.dropdown li {
             display: block;
             clear: both;
             padding: 20px;
             border: 5px solid white;
-            
         }
-        ul li  ul.dropdown{
-            top: 66px;
+
+        ul li ul.dropdown {
+            top: 50px; /* Adjusted the top position to match the height of header */
             width: 70px;
             background-color: aqua;
             position: absolute;
             z-index: 999;
             display: none;
-           padding: 1px 20px;
-           
-           
-
+            padding: 1px 20px;
         }
-        ul li:hover ul.dropdown{
+
+        ul li:hover ul.dropdown {
             display: block;
+        }
+
+        .box {
+            height: 1000px;
+            background-color: lightgrey; /* Added background color for visibility */
         }
     </style>
 </head>
-
 <body>
     <header>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
-                
-                <li><a href="#about">About</a><ul class="dropdown">
-                    <li>item1</li>
-                    <li>item2</li>
-                    <li>item3</li>
-                </ul></li>
+                <li><a href="#about">About</a>
+                    <ul class="dropdown">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                    </ul>
+                </li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#service">Service</a></li>
-
             </ul>
         </nav>
     </header>
+    <div class="box">a</div>
 </body>
-
 </html>
