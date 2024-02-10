@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* position - static (default), relative aboslute fixed sticky*/
+        .box {
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        #box3 {
+            /* static -  default value, top bottom left right couldnt apply it will be in default position*/
+            /* position: static; */
+
+
+            /* relative - relative to its normal position and will leave a gap to its normal postion */
+            /* position: relative; */
+            /* top: 134px;
+            left: 34px; */
+             
+            /* absolute - relative to its first parent */
+            /* position: absolute; */
+           
+            top: 134px;
+            left: 34px; 
+             /* An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. */
+            /* fixed - postion the element relative to the browser window */
+            position: fixed;
+            
+            /* sticky - when we scroll down it remains at the same place until it reaches the top of its parent */
+            /* sticky - it is like `fixed`, but when we scroll down it will stay at that position until we reach the next section with `sticky` property set */
+            /* sticky - when we scroll down it stays at that position till it reaches the next fixed/sticky element or reach the bottom of the page */
+            /* position: sticky;
+            top: 0px; */
+        }
+
+        .container {
+            background-color: wheat;
+            border: 2px solid black;
+            height: 3444px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>
