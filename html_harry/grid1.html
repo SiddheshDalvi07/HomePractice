@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid row</title>
+    <style>
+        .grid{
+            display: grid;
+            /* grid-template-rows: 1fr 1fr 4fr; */
+            grid-auto-rows: 2fr;
+            grid-template-columns: 1fr 4fr 2fr;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            /* grid-gap: row column; 2rem 2rem; obsolete -old fashioned */
+
+        }
+        .box{
+            background-color: rgb(101, 22, 22);
+            border: 2px solid rgb(207, 158, 86);
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box">this is a box1</div>
+        <div class="box">this is a box2</div>
+        <div class="box">this is a box3</div>
+        <div class="box">this is a box4</div>
+        <div class="box">this is a box5</div>
+        <div class="box">this is a box6</div>
+        <div class="box">this is a box7</div>
+        <div class="box">this is a box8</div>
+        <div class="box">this is a box9</div>
+        <div class="box">this is a box10</div>
+        <div class="box">this is a box11</div>
+        <div class="box">this is a box12</div>
+        <div class="box">this is a box13</div>
+        <div class="box">this is a box14</div>
+        <div class="box">this is a box15</div>
+        <div class="box">this is a box16</div>
+        <div class="box">this is a box17</div>
+        <div class="box">this is a box18</div>
+        <div class="box">this is a box19</div>
+        <div class="box">this is a box20</div>
+    </div>
+</body>
+</html>

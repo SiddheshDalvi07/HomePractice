@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            border: 2px solid red;
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color inset; */
+            /* inset from outer shadow to inner shadow */
+            box-shadow: 5px 5px 10px 6px rgba(0, 0, 0, 0.4);
+
+
+            
+            transition: transform .3s ease;
+        }
+        .card:active{
+            transform: scale(0.97) translateY(-10px);
+        }
+        h2{
+        
+            /* text-shadow: offset-x offset-y blur-radius color; */
+            text-shadow: 5px 5px 10px blue;
+
+            /* for multiple shadow and color */
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, expedita accusantium dolorum saepe
+                aliquam cum reiciendis error, vel cupiditate tempore facilis at explicabo perferendis. Minima quidem
+                doloremque impedit asperiores atque veritatis odio quo modi.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum minima cupiditate odit,
+                similique aliquam hic alias quos aspernatur unde eveniet quaerat, fuga qui dolores tempore eaque
+                suscipit amet laboriosam iusto quo earum porro.</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eligendi alias beatae praesentium tempore
+                sequi eius! Officiis, possimus alias quia repellat, voluptatem, explicabo sapiente nobis ea vero rerum
+                aliquam reprehenderit corporis perferendis saepe fuga?</p>
+        </div>
+    </div>
+</body>
+
+</html>

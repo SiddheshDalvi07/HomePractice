@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* if p is contained by any li which is contained by div */
+         /* div p{                         
+            color: yellow;
+            font-weight: bold;
+            background-color: green; 
+         } */
+
+
+
+         /* if p is right inside div then css will be applied  / direct child css selector */
+       /* div > p{          
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+        } */
+
+
+            /* if p is right after div i.e p is the next sibiling of the div    / previous sibling css selector */
+        /* div + p{
+            color: white;
+            background-color: red;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <h1> this is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>this is para inside li</p></li>
+                <li>sfaf</li>
+                <p>ssrfaf</p>
+            </ul>
+            <p>this is a paragraph</p>
+        </div>
+        <p>this is another paragraph</p>
+    </div>
+    <p>this is outermost paragraph</p>
+</body>
+</html>
