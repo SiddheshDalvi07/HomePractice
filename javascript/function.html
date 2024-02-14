@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+    <script>
+        var n = 10
+        document.write("numeric value is " + n)
+        document.write("<br>")
+        var s = "itvedant"
+        document.write("string value is " + s)
+        document.write("<br>")
+        var f = 10.5
+        document.write("decimal value is " + f)
+        document.write("<br>")
+        var pi = 3.14
+        document.write("const value is " + pi)
+        document.write("<br>")
+
+        x = 10 //global variable
+        function add() {
+            var k = 10 //local
+            var s = 20
+            document.write("add is " + (k + s + x))
+        }
+        add()
+        // document.write(k)
+        document.write("<br>")
+
+        function mul() {
+            var p = 10
+            if (p == 10) {
+                let y = 5
+                document.write("mul is " + (p * y))
+            }
+        }
+        mul()
+
+        function cube(a) {
+            return a * a * a;
+        }
+        document.write("<br>")
+        //  document.write("cube of 3 is " + cube(3));
+        console.log("the cube of 5 is " + cube(5))
+
+        //  document.write("<br>")
+
+        //  function cube(a) {
+
+        //     document.write(`cube of ${a} is ` + a* a* a);
+        //  }
+
+        //  cube(6)
+        //  document.write("<br>")
+
+        //  function cube(a) {
+
+        //     console.log(`cube of ${a} is ` + a* a* a);
+        //     document.write(`cube of ${a} is ` + a* a* a);
+        //  }
+
+        //  cube(5)
+
+        function area(width, height) {
+            var area = width * height
+            return area
+
+        }
+        // annoynmous function
+        document.write("the area is " + area(5, 2) + "<br>")
+        document.write("the area is " + area(5, 2) + "<br>")
+
+
+        // arrow function
+        var x = function (a, b) {
+            return a + b
+        }
+        document.write("the addition is " + x(10, 4) + " <br>")
+
+        var k = (a, b) => a + b
+        document.write("the addition using arrow function is " + k(7, 8) + "<br>");
+
+
+    </script>
+</body>
+
+</html>
