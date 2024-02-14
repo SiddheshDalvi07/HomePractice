@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+
+<body>
+    <script>
+        function isArmstrong(number) {
+            const numString = number.toString();
+            const digits = numString.length;
+            let sum = 0;
+
+            for (let i = 0; i < digits; i++) {
+                const digit = parseInt(numString[i]);
+                sum += Math.pow(digit, digits);
+            }
+
+            return sum === number;
+        }
+
+        const number = parseInt(prompt("Enter a number:"));
+
+        if (isNaN(number)) {
+            alert("Invalid input. Please enter a valid number.");
+        } else {
+            if (isArmstrong(number)) {
+                alert(`${number} is an Armstrong number.`);
+            } else {
+                alert(`${number} is not an Armstrong number.`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

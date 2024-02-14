@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <script>
+
+        // for (let i = 1; i <= 10; i++) {
+        //     document.write(i + "<br>")
+
+        // }
+        let fruits = ["apple", "banana", "cherry"];
+        for (let i in fruits) {
+            document.write(`I like ${fruits[i]}` + "<br>");
+        }
+
+        for (let i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + "<br>")
+
+
+        }
+
+
+        let highScores = [10, 9, 8, 11];
+
+        for (let i = 0; i < highScores.length; i++) {
+            document.write(highScores[i] + "<br>");
+        }
+
+        document.write("<br>")
+
+        const number = [45, 4, 9, 16, 25];
+
+        let text = "";
+        for (let x in number) {
+            text += number[x] + "<br>";
+        }
+
+
+        document.write(text + "<br>")
+
+
+        const numbers = [45, 4, 9, 16, 25];
+
+        let txt = "";
+        for (let x in numbers) {
+            txt += numbers[x] + "<br>";
+        }
+        document.write(txt + "<br>")
+
+        // let k = 1
+        // while (k<=10) {
+        //     document.write(k+"<br>")
+        //     k++;
+        // }
+
+        let s = 1
+        do {
+            document.write(s + "<br>")
+            s++
+
+        } while (s <= 10)
+
+        // var i = 11
+        // var k = prompt("enter end value ")
+        // var n = parseInt(k)
+        // do {
+        //     document.write(i + "<br>");
+        //     i++;
+        // } while (i <= n);
+
+
+
+        
+
+    </script>
+</body>
+
+</html>
