@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+   <h1>hello</h1>
+   <div id="content">
+
+    </div>
+    <script>
+        //  String Methods in JavaScript
+        let str = "Hello World";
+
+        console.log(str.length);   // Output: 11 (It gives the length of a string)
+        console.log(str.toUpperCase());     // Output: HELLO    
+        console.log(str.slice(0, 5))   // Output: Hello 
+
+        let temp = `${str}  JavaScript`;
+        console.log(temp);      // Output: Hello World  JavaScript
+
+        let temp2 = temp.length
+        console.log(`${temp2}`)
+
+        // escape sequence 
+        let specialCharacters = `\"\n\t\b\r\v`
+        console.log(specialCharacters);       // Output:\"\n\t\b\r\v
+
+        // \ is used to represent escape sequences
+
+        console.log("hello \nworld");    // Output: hello  world
+
+        // trim() method removes extra spaces from both ends of a string
+        let spaceStr = "   Hello World   ";
+        console.log(spaceStr.trim())    // Output: Hello World
+
+        // includes(), startsWith(), endsWith() methods are used for checking substrings
+        let myStr = "This is a sample string.";
+        console.log(myStr.includes('is'));    // Output: true
+        console.log(myStr.startsWith('This'));   // Output: true
+        console.log(myStr.endsWith('.'));   // Output: true
+
+        // indexOf() and lastIndexOf() methods return the first occurrence and the last occurrence of a substring respectively
+        // indexOf(), lastIndexOf() methods return the first and last occurrence of a substring
+        console.log(myStr.indexOf('is'));   // Output: 2
+        console.log(myStr.lastIndexOf('.'));   // Output: 19
+
+        // charAt() returns the character at a specific position
+        console.log(myStr.charAt(4));   // Output: s
+
+        // concat() method can be used to concatenate two strings
+        let str1 = 'Hello';
+        let str2 = 'World';
+        let str3 = str1.concat(' ', str2);
+        console.log(str3);   // Output: Hello World
+
+        // repeat() method repeats a string n number of times
+        console.log(str.repeat(3));     // Output: HelloHelloHello
+
+
+
+
+        if (str.includes("World")) {
+            console.log("Yes");
+        } else {
+            console.log("No")
+        }                       // Output: Yes
+
+        let index = str.indexOf("o");
+        console.log(index);          // Output: 4
+
+        let lastIndexOf = str.lastIndexOf("o");
+        console.log(lastIndexOf);     // Output: 7
+
+        let charAt = str.charAt(2);
+        console.log(charAt);           // Output: l
+
+        let replace = str.replace("l", "*");
+        console.log(replace);          // Output: He*lo Wor*d
+
+        let splitStr = str.split(" ");
+        console.log(splitStr);         // ["Hello","World"]
+
+        let y = new String("this")
+        console.log(y)     
+        // string constructor is not used often in JavaScript because it's redundant with primitive types. Instead, you would just assign a regular string
+        // Output: this
+
+        document.getElementById('content').innerHTML = '<h3>This is an h3 heading </h3>';
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+
+</html>

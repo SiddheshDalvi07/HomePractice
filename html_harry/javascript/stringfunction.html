@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+</head>
+<body>
+    <script>
+        var str = "This is a string"
+        console.log(str)
+
+        var position = str.indexOf("is")
+        console.log(`The first appearance of 'is' starts at index ${position}`)
+
+        var position = str.lastIndexOf("is")
+        console.log(`The last appearance of 'is' starts at index ${position}`)
+
+        var substr = str.slice(1,-3)  
+        console.log(substr) // outputs: hi --it can take negative index in second option
+        
+        var substr = str.substring(0,8)  
+        console.log(substr) // outputs: hi -- index start and index end
+
+        var substr = str.substr(0,8)
+        console.log(substr) // outputs: hi -- from index and length of index
+
+        var replaced = str.replace('string','siddhesh')
+        console.log(str)
+        console.log(replaced)
+
+        console.log(str.toUpperCase())
+        console.log(str.toLowerCase())
+
+        var newstring = str.concat("," , " Hello World");  //to join two different strings
+        console.log(newstring);
+        
+        var strTrim1 = "        this contain        whitespaces            "
+        console.log(strTrim1)
+        console.log(strTrim1.trim());  // it will remove all the start and end white spaces 
+
+        var char3 = str.charAt(2)
+        console.log(char3)
+
+        var char3 = str.charCodeAt(2)
+        console.log(char3)
+        //it will return unicode character code
+
+        console.log(str[3])
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
