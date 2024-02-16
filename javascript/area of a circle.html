@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area of a circle</title>
+</head>
+
+<body>
+    <script>
+        function calculateArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        let radius = parseFloat(prompt("Enter the radius of your circle in cm:", 0));
+        let area = calculateArea(radius);
+        alert(Math.floor(area));
+        
+    </script>
+</body>
+
+</html>
