@@ -13,7 +13,7 @@
         let string = prompt("please enter a string")
         let len = string.length
         for (i = 0; i < len / 2; i++) {
-            if (string[i] != string[len - i - 1]) {
+            if (string[i] != string[len - 1 - i]) {
                 console.log(string + " is not a palindrome")
                 break
             }

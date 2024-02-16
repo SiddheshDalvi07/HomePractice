@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array function</title>
+</head>
+<body>
+    <script>
+        let a = [5, 3, 9, 3, 5, 6, 7, 8]
+
+        a.splice(5,1) 
+        console.log(a)
+        // pop method always removes the last element from the array, regardless of its value. If you want to remove an element with a specific value from the array, you should use the splice method in combination with the indexOf method
+
+        console.log(a.sort()) // sort array small to big
+        console.log(a.reverse()) // reverse order of elements in an array
+        a.push("this is pushed")
+        console.log(a)
+    
+        // name.pop()
+        console.log(a.pop()) // remove last item from array and return it
+        console.log(a)
+        a.shift() //remove first item from array and return it
+        console.log(a)
+        a.unshift("first added") //add at beginning of array
+        console.log(a)
+
+        let arr = new Array(23)
+        arr.splice(4,0,"Hello World!")
+        console.log(arr)
+
+
+
+
+    </script>
+</body>
+</html>
