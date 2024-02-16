@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonaci</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a number"));
+
+        let n1 = 0
+        let n2 = 1
+        let sum = 0
+        console.log(n1)
+        console.log(n2)
+        for (let i = 0; i <= n ; i++) {   //add -2 if want 10fs=55 output
+            let temp = n1 + n2
+            n1 = n2
+            n2 = temp
+            console.log(temp)
+        }
+
+    </script>
+</body>
+
+</html>

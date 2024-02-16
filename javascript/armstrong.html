@@ -17,13 +17,11 @@
             for (let i = 0; i < digits; i++) {
                 const digit = parseInt(numString[i]);
                 sum += Math.pow(digit, digits);
-            }
 
+            }
             return sum === number;
         }
-
-        const number = parseInt(prompt("Enter a number:"));
-
+        let number = parseInt(prompt("Enter a number"))
         if (isNaN(number)) {
             alert("Invalid input. Please enter a valid number.");
         } else {
