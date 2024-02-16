@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+
+        console.log("this is tutorial")
+
+        let name = "sid"
+        let name2 = "harry"
+        let name3 = "shubham"
+        let name4 = "vijay"
+        let greetText = "Good Morning"
+        // console.log(name+ " is a good boy")
+        // console.log(name2+ " is a good boy")
+        // console.log(name3+ " is a good boy")
+        // console.log(name4+ " is a good boy")
+
+        function greet(name, greetText = "Default argument") {
+            console.log(greetText + " " + name)
+            console.log(name + " is a good boy")
+        }
+
+        greet(name, greetText);
+        greet(name2, greetText);
+        greet(name3, greetText);
+        greet(name4,);
+
+        function add(a, b, c) {
+            let d = a + b + c
+            return d
+            console.log("The sum of the three numbers are: ", d) //this line  will not execute as it's after the return statement 
+        }
+
+        let add1 = add(3, 2, 3)
+        console.log(add1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert prompt confirm</title>
+</head>
+
+<body>
+    <script>
+
+        //alert in browser javascript
+        //alert("This is a message") //modal window it does not return anything
+
+       // let name = prompt("Enter your name:", "Guest") //with default  value "Guest", if user click cancel button returns null
+       // console.log(name)
+
+        let deletePost = confirm("Are you sure to delete this post?");
+        console.log(deletePost);
+
+        if (deletePost == true) {
+            console.log("The Post has been deleted!");
+        } else {
+            console.log("Action Cancelled! The Post remains intact.");
+        }
+
+
+        // if (confirm("Do you want to continue?")) {
+        //     alert("Welcome " + name);
+        // } else {
+        //     alert("Goodbye");
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
