@@ -1,0 +1,11 @@
+Differentiate between HTML, CSS, JavaScript.
+
+answer
+
+HTML (Hypertextup Language) provides the structure of a web page, elements like headings, paragraphs links, and images. It is a markup language not a programming language, and is relatively easy to learn. 
+
+CSS (Cascading Style She) is used to style and format the layout of a web page It can be used to control the visual appearance of HTML elements, such as colors, fonts,acing, and positioning. CSS is a separate language from HTML, but it is often used in conjunction with it to create visually appealing and responsive web designs.
+
+JavaScript is a high-level, dynamic, and interpreted programming language that is commonly used to create interactive and dynamic web content. It can be used to add functionality to web pages, such as form validation, animations, and real-time updates. JavaScript is typically used in conjunction with HTML and CSS to create complete web applications.
+
+In summary, HTML defines the structure of a web page, CSS defines its style and layout, and JavaScript adds interactivity and dynamic behavior to the page.

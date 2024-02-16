@@ -1,0 +1,27 @@
+How to make a comment in JavaScript ?
+
+
+//This is a single-line comment
+
+/* This is a multi-line comment. It can span multiple 
+lines and include any text you want /*
+
+
+
+
+
+
+In JavaScript, there are several options to display output to the screen. Here are some of the most commonly used methods:
+
+1. console.log(): This is a built-in function in JavaScript that allows you to print output to the browser's console. It's an excellent tool for debugging purposes, as it allows you to print messages, variables, and object values to the console.
+
+2. window.alert(): This function allows you to display a message to the user in a popup dialog box. It's a valuable way to provide essential information or a simple confirmation when required.
+
+3. innerHTML property: This property is used to access and modify the HTML content of an element in your HTML document. You can use this property to create printable content on your web page by manipulating the content within an HTML element.
+
+4. document.write(): This method writes HTML content directly to your document, effectively replacing your existing content with the new content. It can be used to print information like the current date and time directly on a web page.
+
+5. window.print(): This method is used to print the entire web page or specific HTML content. When called, it opens the browser's print dialog box, allowing the user to print the page.
+
+
+
