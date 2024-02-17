@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    <script>
+        
+        let weight = parseInt(prompt("Enter your weight (in kg):"))
+        let height = parseInt(prompt("Enter your height (in cm):"));
+        let m = height/100 ;  //converting height from cm to meters
+        const bmi = weight / Math.pow(m, 2).toFixed(1);
+        let message = "";
+
+        if (bmi < 18.5) {
+            message = "You are underweight.";
+        } else if (bmi < 24.9) {
+            message = "You have a normal weight.";
+        } else if (bmi < 29.9) {
+            message = "You are overweight.";
+        } else {
+            message = "You are obese.";
+        }
+        alert(message + " Your BMI is " + bmi);
+    </script>
+</body>
+
+</html>

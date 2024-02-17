@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter to centermeter</title>
+</head>
+<body>
+    <script>
+        function m_to_cm(meter) {
+           m_to_cm = meter * 100
+           return `${meter} m = ${m_to_cm} cm`
+        }
+
+        let meters = parseInt(prompt("Enter the value in meters: "));
+        let meter = m_to_cm(meters);
+        alert(meter)
+
+    </script>
+</body>
+</html>
