@@ -10,6 +10,80 @@
 <body>
     <!-- The 'for' loop is used when the number of iterations is known beforehand
          The 'while' loop is used when the number of iterations is not known in advance -->
+
+    <script>
+
+        console.log("this is tutorial")
+        let i = 0
+        for (i = 0; i < 3; i++) {
+            console.log(i)
+        }
+
+        let friends = ["John", "Jane", "Tom", 'sid'];
+        while (friends.length > 0) {
+            // let friend = friends.pop(); // remove last element from array and return it  
+            let friend = friends.shift() //remove first element from array and return it
+            console.log(friend)
+        }
+
+        let fruits = ["mango", "apple", "banana"]
+
+        for (let index = 0; index < fruits.length; index++) {
+            // let element = fruits[index];
+            console.log("I like " + fruits[index])
+        }
+        //modern loop - for each loop with function keyword
+        fruits.forEach(function f(element) {
+            console.log("this is a " + element + " friend");
+        })
+        // for each with arrow function
+        fruits.forEach(element => {
+            console.log("this is a " + element + " friend");
+        });
+
+        for (element of fruits) {
+            console.log("hello " + element + " javascript");
+        }
+
+        let employee ={
+            name: "John Doe",
+            age: 25,
+            position: "Software Engineer"
+          };
+        
+          //use this loop to iterate over objects in javascript 
+          //for in loop will go through all enumerable properties of an object
+
+          for(key in employee){
+            console.log("Key : "+ key+" Value : "+employee[key]);
+          }
+
+          let set = 0
+          while(set<4){
+            console.log(`${set} this is less than 4`)
+            set++
+          }
+
+          let set1 = 34
+          do{
+            console.log(`${set1} this is less than 4 and we are inside do while loop`)
+            set1++
+          }while(set1<4)
+
+
+          
+
+
+
+
+
+
+
+
+
+
+    </script>
+
 </body>
 
 </html>

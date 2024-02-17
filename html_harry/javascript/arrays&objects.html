@@ -23,8 +23,59 @@
         console.log((myVar2), (myVar3))
         console.log((myVar4))
 
+        let employee = {
+            name:  'John Doe',
+            age:  35,
+            role: 'Developer'
+        }
+        console.log(employee)
+        
+       
+        let names=[1,2,4,"sid"] //array
+
+        let name=new Array(41,2,23,"sid") // array object
+
+        console.log(names[1])
+        console.log(names.concat(name))
+        console.log(name.indexOf("sid"))// returns the first index of element in an array
+        console.log(name.lastIndexOf("sid"))//returns the last index of element in an array
+        console.log(name.sort()) // sort array small to big
+        console.log(name.reverse()) // reverse order of elements in an array
+        name.push("this is pushed")
+        console.log(name)
+    
+        // name.pop()
+        console.log(name.pop()) // remove last item from array and return it
+        console.log(name)
+        name.shift() //remove first item from array and return it
+        console.log(name)
+        name.unshift("first added") //add at beginning of array
+        console.log(name)
+        console.log(name.splice(2,0,"siid", "added between")); 
+        //2=index , 0= how many need to be removed after element placed 
+        //insert items into array at specific position
+        console.log(name);
 
 
+      
+
+
+
+
+
+        //spread  operator - used to expand an array or object into individual elements
+        // let a = [1,2,3,4]
+        // let b = [5,6,7,8,...a]
+        // console.log(a)
+        // console.log(b)
+
+        //rest  parameter - represents indefinite number of arguments as an array
+        // function sum(...args){
+        //     return args.reduce((acc, val)=>{return acc + val}, 0);
+        // }
+        // console.log(sum())
+        // console.log(sum(1))
+        // console.log(sum(1,2))
 
 
 
