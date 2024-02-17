@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of a rectangle</title>
+</head>
+
+<body>
+    <script>
+        let num = (length, breadth) => {
+            if (breadth == 0) {
+                return length * length
+            }
+            else
+            {
+                return length * breadth
+            }
+
+        }
+        let n = prompt("Enter the Length: required");
+        let m = prompt("Enter the Breadth: optional");
+        alert(`The area of rectangle is ${num(n, m)}`);
+    </script>
+</body>
+
+</html>
