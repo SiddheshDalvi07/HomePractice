@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+
+        animal = {
+            name: "cat",
+            color: "black",
+            age: 2,
+            meow: function () {
+                console.log("meow.....")
+            }
+        };
+        console.log(animal.name);
+        console.log(animal.color);  //dot notation  
+        console.log(animal["age"]); //bracket notation
+        animal.meow()               //call the method
+
+    </script>
+</body>
+
+</html>
