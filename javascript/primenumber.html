@@ -13,13 +13,13 @@
 
         let n = parseInt(prompt("Enter a positive integer"));
         if (n == 1) {
-            console.log(`${n} is neither prime nor composite number`)
+            alert(`${n} is neither prime nor composite number`)
         }
         else if (n < 1) {
-            console.log(`${n} is not a prime number`)
+            alert(`${n} is not a prime number`)
         }
         else if (n==2) {
-            console.log(`${n} is a prime number`)
+            alert(`${n} is a prime number`)
         }
         else {
             for (let i = 2; i < n; i++) {
@@ -32,7 +32,7 @@
 
                 }
             }
-            console.log(res)
+            alert(res)
         }
 
 

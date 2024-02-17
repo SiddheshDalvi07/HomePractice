@@ -37,8 +37,13 @@
         }
 
         let num = parseInt(prompt("Enter a number"));
+        if (ArmstrongNumber(num)) {
+            alert(num + " is an Armstrong number")
+        } else {
+            alert(num + " is not an Armstrong number")
+        }
         // console.log(ArmstrongNumber(num))
-        console.log(ArmstrongNumber(num) ? `${num} Is` : `${num} Not`, 'an Armstrong Number')
+        // alert(ArmstrongNumber(num) ? `${num} Is` : `${num} Not`, `an Armstrong Number`)
 
 
         // It is called the Conditional Operator (which is a ternary operator).
