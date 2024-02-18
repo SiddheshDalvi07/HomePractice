@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+</head>
+
+<body>
+    <h1>Currency Converter</h1>
+    <form>
+        From:
+        <select id="From">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+        To:
+        <select id="to">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+        </select>
+        <br>
+        Amount To Conveter
+        <input type="text" id="amount">
+        <button type="button" id="convert">Convert</button><br>
+        Result Amount: 
+        <span id="result"></span>
+        <!-- <p id="result"></p> -->
+        </form>
+        <script>
+            const from = document.getElementById('From');
+            const to = document.getElementById('to');
+            const amount = document.getElementById('amount');
+            const result = document.getElementById('result');
+            const convert = document.getElementById('convert');
+            convert.addEventListener('click', () => {
+                let fromCurrency = from.value;
+                let toCurrency = to.value;
+                let amt = amount.value;
+
+
+                fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`).then(response => { return response.json() }).then(data=> {
+                    let rate = data.rates[toCurrency]
+                    let totalResult = rate*amt
+                    result.innerHTML = `${amt} ${fromCurrency} =  ${totalResult.toFixed(2)} ${toCurrency}`;
+                })
+            })
+        </script>
+</body>
+
+</html>
