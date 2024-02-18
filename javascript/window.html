@@ -9,8 +9,13 @@
 
 <body>
     <p id="demo"></p>
+    <button onclick="setTimeout(myFunction, 3000)">Try it</button>
+
+
+
+
     <script>
-        window.console.error("you made a mistake")
+      //  window.console.error("you made a mistake")
         document.write("width " + screen.width, "<br>")
         document.write("height " + screen.height, "<br>")
         document.write("colorDepth " + screen.colorDepth, "<br>")
@@ -32,6 +37,10 @@
             document.getElementById("demo").innerHTML = d.toLocaleTimeString();
         }
 
+   
+        function myFunction() {
+            alert('Hello');
+        }
 
     </script>
 </body>
