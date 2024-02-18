@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+</head>
+<body>
+    <script>
+         fetch('https://fakestoreapi.com/products').then(response=>response.json()).then(data=>console.log(data))
+     
+        // fetch('https://fakestoreapi.com/products')
+        //     .then(res=>res.json())
+        //     .then(json=>console.log(json))
+//The fetch() method in JavaScript is used to request data from a server. The request can be of any type of API that return the data in JSON or XML. The fetch() method requires one parameter, the URL to request, and returns .
+
+// Parameters: This method requires one parameter and accepts two parameters:
+
+// ●        URL: It is the URL to which the request is to be made.
+
+// ●        Options: It is an array of properties. It is an optional parameter.
+
+ 
+
+// Return Value: It returns a promise whether it is resolved or not. The return data can be of the format JSON or XML. It can be an array of objects or simply a single object.
+ 
+ 
+    </script>
+</body>
+</html>

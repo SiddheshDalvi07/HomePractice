@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested object</title>
+</head>
+
+<body>
+    <script>
+
+        animal = {
+
+            cat: {
+                name: "billo",
+                color: "white"
+
+            },
+
+            dog: {
+
+                name: "sheru",
+                color: "black",
+                cat: function(){
+                    console.log(this.name)
+                } 
+            }
+        }
+
+        console.log("the cat name is "+animal.cat.name)
+        console.log("the cat color is "+animal.cat.color)
+        console.log("the dog name is "+animal.dog.name)
+        animal.dog.cat()
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

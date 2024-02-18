@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <title>reduce</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const sum = numbers.reduce((a, b) => a + b); // add the integer or number and  if string then  convert to String() 
+        // reduce() method reduces the array to a single value by repeatedly applying a function that takes two arguments: accumulator and current value. The callback is invoked with an accumulator value of undefined
+        // reduce() method is used to apply a function that reduces an array of values into a single value. It takes two parameters: accumulator and currentValue. The callback function is executed for each element in
+        console.log(sum); // Output: 15
+        console.log(numbers)
+
+        let num = [1, 2, 3, 4, 5]
+        let nus = num.reduceRight((acc, cur) => cur - acc, 1) // 1 is starting value of accumulator
+        console.log(nus)
+
+        //code for sum , muliple of give array of numbers or given digit or numbers
+
+        // let num1 = 123
+        // let nus2 = num1.toString
+        // let nus3 = nus2.reduce((acc,cur)=> acc+cur,1)
+        // console.log(nus3)
+
+        function sumOfDigits(num) {
+            return String(num).split('').reduce((acc, cur) => acc + Number(cur), 0);
+        }
+
+        console.log(sumOfDigits(12345));
+
+        let a=1
+        let b="1"
+        console.log(a==b?'c':'d')
+    </script>
+</body>
+
+</html>
