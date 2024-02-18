@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowest value</title>
+</head>
+
+<body>
+    <script>
+        function findLowestValue(arr) {
+            if (arr.length === 0) {
+                return undefined; 
+            }
+
+            let lowest = arr[0]; 
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < lowest) {
+                    lowest = arr[i]; 
+                }
+            }
+
+            return lowest; 
+        }
+        
+        const numbers = [3, 7, 2, 8, 1, 5];
+        console.log("Lowest value:", findLowestValue(numbers))
+
+    </script>
+</body>
+
+</html>

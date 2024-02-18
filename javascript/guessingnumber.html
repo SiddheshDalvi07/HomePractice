@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Numbers</title>
+</head>
+
+<body>
+    <script>
+        function guessRandomNumber(min, max) {
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            let count = 0;
+
+            while (true) {
+                const guess = parseInt(prompt(`Guess a number between ${min} and ${max}:`));
+
+                if (isNaN(guess)) {
+                    alert("Please enter a valid number.");
+                } else {
+                    count++;
+
+                    if (guess === randomNumber) {
+                        alert(`Congratulations! You guessed the correct number (${randomNumber}) in ${count} attempts.`);
+                        break;
+                    } else if (guess < randomNumber) {
+                        alert("Too low! Try again.");
+                    } else {
+                        alert("Too high! Try again.");
+                    }
+                }
+            }
+        }
+
+        // Example usage:
+        guessRandomNumber(1, 100);
+
+    </script>
+</body>
+
+</html>

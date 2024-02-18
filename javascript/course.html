@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+</head>
+
+<body>
+    <script>
+        const course = {
+            courseName: "JavaScript Programming",
+            duration: "3 months",
+            fees: 1000,
+            enrol() {
+                console.log("You have successfully enrolled in the course:", this.courseName);
+            },
+            cancel() {
+                console.log("Your enrollment has been cancelled for the course:", this.courseName);
+            },
+            discount(discountPercentage) {
+                const discountedAmount = this.fees * (discountPercentage / 100);
+                const finalFees = this.fees - discountedAmount;
+                console.log(`You've received a ${discountPercentage}% discount. Final fees: $${finalFees}`);
+            }
+        };
+
+        
+        console.log("Course details:");
+        console.log("Name:", course.courseName);
+        console.log("Duration:", course.duration);
+        console.log("Fees:", course.fees);
+
+        course.enrol(); 
+        course.discount(20); 
+        course.cancel(); 
+    </script>
+</body>
+
+</html>
