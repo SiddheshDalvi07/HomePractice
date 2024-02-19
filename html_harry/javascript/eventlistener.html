@@ -58,24 +58,30 @@
         // agar apne id di hai para ki toh voh as a global variable ke jaise kaam karega ki voh global variable id ke equal hota hai
 
         let para = document.getElementById('para')
-        para.addEventListener('mouseover',function() {
+        para.addEventListener('mouseover', function () {
             console.log("Mouse Inside")
         })
-        para.addEventListener('mouseout',function() {
+        para.addEventListener('mouseout', function () {
             console.log("Mouse Outside")
         })
 
         // using addEventListener method to bind event listener
-        document.getElementById("btn").addEventListener('click', function(){
+        document.getElementById("btn").addEventListener('click', function () {
             var x = document.querySelector("p");
-            if(x.style.visibility === "hidden"){
+            if (x.style.visibility === "hidden") {
                 x.style.visibility = "visible";
-            }else{
+            } else {
                 x.style.visibility = "hidden";
             }
         });
 
+        // let container = document.getElementsByClassName("container")
+        // container.innerHTML = "<h2>hello</h2>"
+        // console.log(container)
 
+        // let container = document.querySelector(".container");
+        // container.insertAdjacentHTML('afterEnd', '<h2>hello</h2>');  //The value provided ('afterBegi') is not one of 'beforeBegin', 'afterBegin', 'beforeEnd', or 'afterEnd'.
+        // console.log(container);
 
     </script>
 </body>

@@ -10,6 +10,10 @@
     <script>
         let a = [5, 3, 9, 3, 5, 6, 7, 8]
 
+        b= a.join() //adds all the element of the array to a string and add seperator comma between each elements by default
+        
+        console.log(`The array is ${b}`)
+
         a.splice(5,1) 
         console.log(a)
         // pop method always removes the last element from the array, regardless of its value. If you want to remove an element with a specific value from the array, you should use the splice method in combination with the indexOf method
