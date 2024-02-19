@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <script>
+        // function greet1() {
+        //     console.log(this); // Output: undefined (global object)
+        // }
+        // greet1()
+
+        let greet = () => {
+            console.log("Hello World!");
+        }
+
+        greet();
+
+        setTimeout(() => {
+            console.log("we are inside setTimeout")
+        }, 1000);
+
+        let sum2 = (a, b) => {
+            return a + b
+        }
+        console.log(sum2(5, 7));
+
+        let sum3 = (a, b) => a + b
+        console.log(sum3(15, 7));
+
+        let half = a => a / 2
+        console.log(half(4))
+
+
+        let obj = {
+            greeting: "good morning",
+            names: ["John", "Peter", "Ivan"],
+            length() {
+                return this.names.length;
+            },
+            sayHi(){
+                console.log("Hi "+ this.names[1]);
+            },
+            speak() {
+                this.names.forEach((student) => {
+                    console.log(this.greeting + " hello world " + student)  // if you are using arrow function inside function, in the object then 'this' will be of its parent and if ur using function then this will of its own and not parent - lexical this -  The value of this in an arrow function is inherited from the enclosing (lexical) scope. Functions have a special variable this that refers to the object via which the method was invoked. As the value of this is dynamically given based on the function invocation, it is sometimes called dynamic this .
+                });
+            }
+        };
+        console.log(obj.length());
+        obj.sayHi();
+        obj.speak();
+
+
+
+    </script>
+
+</body>
+
+</html>

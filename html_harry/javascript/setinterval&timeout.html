@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval and Set Timeout</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            my time is : <span id="time"></span>
+        </div>
+        this is container   
+    </div>
+    <script>
+        // setTimeout - allow us to run the function once after the interval of time
+        // clearTimeout - allow us to run the function repeatedly after the interval of time 
+
+        function greet(name, byeText) {
+            console.log("good morning "+ name + " " +byeText)
+
+        }
+        timeOut = setTimeout(greet,3000, "sid", "take care")
+        console.log(timeOut)
+         
+        // clearTimeout(timeOut)
+        // setTimeout(greet(),3000) --- wrong as it is calling the function 
+
+        intervalId = setInterval(greet,3000, "sid", "take care")
+        clearInterval(intervalId);
+
+        function displayTime() {
+            let time = new Date(Date.now())
+            document.getElementById('time').innerHTML = `${time.getHours()} : ${time.getMinutes()} : ${time.getSeconds()}`;
+            // document.getElementById('time').innerHTML = time;
+            // console.log(time)
+            // document.getElementById('time').innerHTML = time;
+        }
+         setInterval(displayTime, 1000)
+
+    </script>
+</body>
+</html>
