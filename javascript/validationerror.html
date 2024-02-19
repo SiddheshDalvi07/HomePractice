@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>User Registration Form</h2>
+    <form id="registrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Retrieve form values
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var location = document.getElementById("location").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Validation
+            var errors = [];
+            if (!name) {
+                errors.push("Name is required");
+            }
+            if (!age) {
+                errors.push("Age is required");
+            }
+            if (!location) {
+                errors.push("Location is required");
+            }
+            if (!email) {
+                errors.push("Email is required");
+            }
+            if (!password) {
+                errors.push("Password is required");
+            }
+            if (password !== confirmPassword) {
+                errors.push("Passwords do not match");
+            }
+
+            // Display errors or success message
+            if (errors.length > 0) {
+                alert("Validation Errors:\n" + errors.join("\n"));
+            } else {
+                alert("Registration Successful!\nName: " + name + "\nAge: " + age + "\nLocation: " + location + "\nEmail: " + email);
+                document.getElementById("registrationForm").reset(); // Reset form
+            }
+        });
+    </script>
+</body>
+
+</html>
