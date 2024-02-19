@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+
+<body>
+    <!-- browser events:
+    click
+    contextmenu
+    dblclick
+    mousedown/mouseup
+    mouseover/mouseout
+    mousemove
+
+    submit
+    focus - input tag focus
+
+    DOMContentLoaded - html ki dom load hone ke baad domcl fire hota hai
+
+    transitionend -->
+    <div class="container">
+        <h1>This is my Heading</h1>
+        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas illo quidem, ullam voluptatibus
+            fugit ea nostrum ut tempora aliquam quis consectetur alias fuga beatae cum expedita dolores ipsa esse
+            aspernatur accusantium. Dolores itaque at aut labore eligendi aspernatur adipisci minima et ea vitae nulla
+            voluptatum quos optio consequatur, veniam ut ipsam, asperiores tenetur error aliquid debitis laboriosam
+            libero quibusdam repellendus. Expedita aspernatur exercitationem quam totam necessitatibus aliquam
+            voluptatum quis quae, hic a nam, odio debitis dolorem repellendus quibusdam cumque tempora cupiditate eum
+            corporis sit nulla. Ipsa esse distinctio tempore exercitationem suscipit. Cum laborum voluptates dolorum
+            doloremque assumenda molestias autem iusto asperiores, repellendus dolores ipsum fugiat esse animi molestiae
+            similique ab quas beatae culpa, inventore quaerat odit consequuntur architecto consequatur explicabo.
+            Pariatur corporis sint, nobis ipsa sequi hic nemo, inventore mollitia eligendi, maxime nam voluptas?
+            Laudantium, repellat. Repellendus quibusdam eos a minus temporibus omnis ex atque expedita maiores tempore
+            eum sunt aspernatur dignissimos voluptatem aliquid perspiciatis, aut officia eius rerum aperiam, assumenda
+            praesentium? Similique magni architecto eius voluptas officia nesciunt vero incidunt, odit ipsa consequatur
+            unde facilis, eveniet ullam iusto atque labore dolores nobis consectetur, aperiam nihil! Facilis corporis
+            soluta, vitae, voluptas accusantium numquam illo error facere esse rem a. Voluptatibus perferendis possimus,
+            rerum eveniet excepturi perspiciatis. Sed voluptatibus eum assumenda similique adipisci asperiores, fugit
+            excepturi laboriosam sequi aliquam rem officia. Officia vero consequatur placeat repudiandae minima. Dolorum
+            eius exercitationem provident amet officiis veniam!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">show/hide</button>
+    <script>
+
+        function toggleHide() {
+            let btn = document.getElementById('btn')
+            let para = document.getElementById('para')
+            if (para.style.display != 'none') {
+                para.style.display = 'none'
+            } else {
+                para.style.display = 'block'
+            }
+        }
+        // agar apne id di hai para ki toh voh as a global variable ke jaise kaam karega ki voh global variable id ke equal hota hai
+
+        let para = document.getElementById('para')
+        para.addEventListener('mouseover',function() {
+            console.log("Mouse Inside")
+        })
+        para.addEventListener('mouseout',function() {
+            console.log("Mouse Outside")
+        })
+
+        // using addEventListener method to bind event listener
+        document.getElementById("btn").addEventListener('click', function(){
+            var x = document.querySelector("p");
+            if(x.style.visibility === "hidden"){
+                x.style.visibility = "visible";
+            }else{
+                x.style.visibility = "hidden";
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
