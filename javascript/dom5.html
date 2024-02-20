@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: burlywood;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam iusto porro, ipsam laborum obcaecati repellat modi nobis placeat praesentium. Debitis, quibusdam. Nam in doloribus aliquam vitae, nisi possimus aliquid, voluptate animi expedita, explicabo atque veniam blanditiis ipsam praesentium ut. Ipsam sapiente eligendi laboriosam, velit fugiat doloribus ipsum consequuntur autem.
+    </div>
+    <script>
+        const block = document.getElementById('block');
+        let container = document.getElementsByClassName( 'container' )[ 0 ];
+
+        container.addEventListener("mouseover",function color() {
+            container.style.color='red'; 
+            
+        })
+        container.addEventListener("mouseout",function color() {
+            container.style.color='black';
+            
+        })
+
+       
+
+
+
+    </script>
+</body>
+</html>

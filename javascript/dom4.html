@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image src</title>
+</head>
+
+<body>
+    <img id="myImage" src="https://i.ytimg.com/vi/r91JQmup9CY/maxresdefault.jpg" alt="Original Image" width="300px">
+    <button id="changeImageButton">Change Image</button>
+    <script>
+        
+        document.getElementById('changeImageButton').addEventListener('click', function() {
+            
+        let image = document.getElementById('myImage')
+        if(image.getAttribute('src') == "https://i.ytimg.com/vi/r91JQmup9CY/maxresdefault.jpg"){
+        
+        image.src = "https://media.istockphoto.com/id/1453738841/photo/amoled-moon-isolated-on-a-black-wallpaper.webp?b=1&s=170667a&w=0&k=20&c=HupzsVOtx2GOTbThpDjUKqIMaJf777w4B4P8vGzhdnQ="
+        }else{
+           image.src="https://i.ytimg.com/vi/r91JQmup9CY/maxresdefault.jpg"
+        }
+    });
+
+
+
+    </script>
+</body>
+
+</html>

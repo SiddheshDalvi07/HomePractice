@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container" id="block">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur <b>adipisicing elit.</b> Corrupti ad sapiente veritatis <b>provident
+                consequatur</b> asperiores cumque <b>voluptas</b> quasi quae. Laborum?
+        </p>
+    </div>
+    <script>
+        var block = document.getElementById('block');
+        let container = document.getElementsByClassName('container')
+        let b = document.getElementsByTagName('b');
+        console.log(b)
+
+        for (let i = 0; i < b.length; i++) {
+            b[i].addEventListener('mouseover', function () {
+                console.log("Over");
+                this.style.backgroundColor = "yellow";
+            });
+
+            b[i].addEventListener('mouseout', function () {
+                console.log("Out");
+                this.style.backgroundColor = "transparent";
+            });
+        }
+        // The error message Uncaught TypeError: b.addEventListner is not a function indicates that addEventListner is not a function because the getElementsByTagName method returns an HTMLCollection, not a single element. Therefore, you cannot directly call addEventListener on it.
+
+    </script>
+</body>
+
+</html>

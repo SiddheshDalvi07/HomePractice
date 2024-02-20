@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: blue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam iusto porro, ipsam laborum obcaecati repellat modi nobis placeat praesentium. Debitis, quibusdam. Nam in doloribus aliquam vitae, nisi possimus aliquid, voluptate animi expedita, explicabo atque veniam blanditiis ipsam praesentium ut. Ipsam sapiente eligendi laboriosam, velit fugiat doloribus ipsum consequuntur autem.
+    </div>
+    <script>
+        const block = document.getElementById('block');
+        let container = document.getElementsByClassName( 'container' )[ 0 ];
+
+        container.addEventListener("mouseover",function color() {
+            container.style.backgroundColor='red'; 
+            container.innerHTML = "The company itself is a very successful company. By tolerating some regularity, he repulses himself, blinded by the troubles of the present. You owe it to some. For in some of the pains of life, unless we can do something, facilitated by the pleasure of the mind, I will explain and forgive the flattery of the very present. The laborious one who wisely chooses himself, wants to avoid the pains that result from him.";
+        })
+        container.addEventListener("mouseout",function color() {
+            container.style.backgroundColor='blue';
+            container.innerHTML = "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam iusto porro, ipsam laborum obcaecati repellat modi nobis placeat praesentium. Debitis, quibusdam. Nam in doloribus aliquam vitae, nisi possimus aliquid, voluptate animi expedita, explicabo atque veniam blanditiis ipsam praesentium ut. Ipsam sapiente eligendi laboriosam, velit fugiat doloribus ipsum consequuntur autem.";
+        })
+
+       
+
+
+
+    </script>
+</body>
+</html>
