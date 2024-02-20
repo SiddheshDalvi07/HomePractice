@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <div class="container">this is my container</div>
+    <script>
+        let jsonObj = {
+            name :"sid",
+            channel:"cwh",
+            freind:"suraj",
+            food:"watana"
+        }
+
+        console.log(jsonObj);
+        //converting object to JSON 
+        let convertToJson = JSON.stringify(jsonObj)
+        console.log(convertToJson);
+        document.querySelector(".container").innerHTML +=  `<br/>${convertToJson}`
+
+        //using string function replace
+        convertToJson = convertToJson.replace("suraj","prasad")
+        console.log(convertToJson);
+
+
+        //Parsing Json back to Object
+         let parseBacktoObject = JSON.parse(convertToJson)
+         console.log(parseBacktoObject);
+         document.querySelector(".container").innerHTML +=  `<br/>Name: ${parseBacktoObject.name} & Channel: ${parseBacktoObject.channel}`;
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
