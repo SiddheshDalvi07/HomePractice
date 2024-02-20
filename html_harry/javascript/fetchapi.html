@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+</head>
+
+<body>
+    <div id="weatherData" class="container">fetch api</div>
+    <script>
+
+        // let p = fetch('https://goweather.herokuapp.com/weather/Ny')
+        // //first stage
+        // p.then((response) => {  // response is a Promise
+        //     console.log(response.status); // http status code eg.200
+        //     console.log(response.ok); //boolean , true if http status code is 200-299
+        //     return response.json();  // extract the JSON data from the response.
+        //     //second stage      
+        // }).then((data) => {
+        //     console.log(data)
+        // });
+
+        // let country = prompt( "Enter the Country Name:")
+        // fetch(`https://goweather.herokuapp.com/weather/${country}`).then((response) => {
+        //     return response.json()
+        // }).then((data) => {
+        //     console.log(data)
+        // });
+
+
+        let country = prompt("Enter the Country Name:");
+
+        fetch(`https://goweather.herokuapp.com/weather/${country}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+                // Function to display data on HTML
+                displayWeatherData(data);
+
+            })
+            .catch((error) => {
+                console.error('Error fetching weather data:', error);
+            });
+
+        function displayWeatherData(data) {
+            // Get reference to the weatherData container
+            const weatherDataContainer = document.getElementById('weatherData');
+
+            // Clear previous data
+            weatherDataContainer.innerHTML = '';
+
+            // Create and append elements to display the fetched data
+
+            const temperature = document.createElement('p');
+            temperature.textContent = `Temperature: ${data.temperature}`;
+            weatherDataContainer.appendChild(temperature);
+
+            const wind = document.createElement('p');
+            wind.textContent = `Wind: ${data.wind}`;
+            weatherDataContainer.appendChild(wind);
+
+            // Display forecast
+            const forecastContainer = document.createElement('div');
+            forecastContainer.innerHTML = '<h3>Forecast:</h3>';
+
+            data.forecast.forEach((forecastDay) => {
+                const forecastDayElement = document.createElement('p');
+                forecastDayElement.textContent = `Day ${forecastDay.day}: Temperature ${forecastDay.temperature}, Wind ${forecastDay.wind}`;
+                forecastContainer.appendChild(forecastDayElement);
+            });
+
+            weatherDataContainer.appendChild(forecastContainer);
+
+            // Add more elements as needed
+        }
+
+        // p.then((resonse) => {()=> {return response.json()}}).then((response)=>{console.log(response)})
+    </script>
+</body>
+
+</html>

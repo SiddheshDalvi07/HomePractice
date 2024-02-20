@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        const list = document.querySelector('ul')
+        console.log(list)
+
+        const netItem = document.createElement('li');
+        netItem.textContent = 'Networking'
+        list.appendChild(netItem)
+
+        const anotherItem = document.createElement('li');
+        anotherItem.textContent = 'django'
+        list.appendChild(anotherItem, list.firstElementChild ); // Adding item after Networking
+
+        const anotherItem1 = document.createElement('li');
+        anotherItem1.textContent = 'python'
+        list.appendChild(anotherItem1, list.firstElementChild ); // Adding item after Networking
+        
+          
+        const modifiedItem = document.createElement('li');
+        modifiedItem.textContent = "Modified Item"; 
+        list.replaceChild(modifiedItem,list.children[2])
+
+        const anotherItem2 = document.createElement('li');
+        anotherItem2.textContent = "java"; 
+        list.appendChild(anotherItem2)
+
+        const anotherItem3 = document.createElement('li');
+        anotherItem3.textContent = "javascript"; 
+        list.appendChild(anotherItem3)
+
+        const removeItem = document.createElement('li');
+        list.removeChild(list.lastElementChild)
+        list.removeChild(list.children[2].remove())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const items = ['apple', 'banana', 'orange']
+
+        // function createListItem (text){
+        //     const li = document.createElement('li')
+        //     li.innerText = text
+        //     return li
+        // } 
+
+        // // Method 1: Using for loop
+        // for (let i = 0; i < items.length; i++){
+        //    const item = createListItem(items[i])
+        //    list.appendChild(item)
+        // }
+    </script>
+</body>
+</html>
