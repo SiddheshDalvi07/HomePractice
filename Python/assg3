@@ -1,0 +1,20 @@
+1. Difference between high-level and low-level programming language:
+
+High-level programming language: These are languages that are designed to be easily understood by humans. They are closer to human languages and are typically easier to read, write, and maintain. High-level languages often have built-in abstractions and features that simplify complex tasks, such as memory management, and are often platform-independent. Examples include Python, Java, and JavaScript.
+Low-level programming language: These are languages that are closer to the computer's hardware and are more difficult for humans to understand directly. They are often used for tasks that require direct control over hardware resources or maximum performance. Low-level languages are typically specific to a particular computer architecture or family of processors. Examples include assembly language and machine code.
+
+2. Description of Python programming language:
+
+Python is a high-level, interpreted programming language known for its simplicity and readability.
+It was created by Guido van Rossum and first released in 1991.
+Python emphasizes code readability and a clean syntax, which makes it easy to learn and use.
+It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+Python has a comprehensive standard library, which provides support for many common tasks and protocols.
+It is widely used in various domains, including web development, data science, machine learning, artificial intelligence, automation, and more.
+Python's popularity has grown significantly over the years, and it has a large and active community of users and developers.
+
+3. Platform-independent programming language:
+
+A platform-independent programming language is one that can run on different types of computer platforms or operating systems without modification.
+These languages are designed to abstract away platform-specific details and provide a consistent environment for program execution across different systems.
+Examples of platform-independent programming languages include Java, Python, and C#. These languages achieve platform independence through mechanisms like virtual machines (e.g., Java Virtual Machine for Java), interpreters, or compilers that generate platform-specific code. This allows programs written in these languages to be executed on any platform that supports the respective runtime environment.
