@@ -1,0 +1,59 @@
+1. Variable is a container to store values.  They are reference to a memory location which is used to store value. They are also called Identifiers.
+
+2. Snake_case and camelCase are two different conventions used for naming variables, functions, and identifiers in programming. They differ primarily in how they format words  within the name.
+
+*Snake_case:
+
+In snake_case, words are separated by underscores ('_').
+All letters are typically lowercase.
+It is commonly used in languages like Python for naming variables, functions, and file names.
+Example: my_variable_name, calculate_average, file_name.txt
+
+*camelCase:
+
+In camelCase, words are concatenated together, and each word after the first begins with a capital letter (except the first word).
+It can be categorized into two types: UpperCamelCase (also known as PascalCase), where the first letter is capitalized, and lowerCamelCase, where the first letter is lowercase.
+It is commonly used in languages like Java, JavaScript, and C# for naming variables, functions, and class names.
+Example (UpperCamelCase): CalculateAverage, MyVariableName, FileNameTxt
+Example (lowerCamelCase): calculateAverage, myVariableName, fileNameTxt
+
+
+3. Integer division, also known as floor division or truncating division, is a mathematical operation that divides one integer by another and yields an integer result.
+result = 10 // 3
+print(result)  # Output: 3
+
+4. def exchange_without_temp(a, b):
+    a = a + b
+    b = a - b
+    a = a - b
+    return a, b
+
+num1 = 10
+num2 = 20
+print("Before swapping:", num1, num2)
+num1, num2 = exchange_without_temp(num1, num2)
+print("After swapping:", num1, num2)
+output:-
+Before swapping: 10 20
+After swapping: 20 10
+
+
+5. user_input = input("Enter a string: ")
+print("You entered:", user_input)
+output:-
+Enter a string: siddhesh
+You entered: siddhesh
+
+6. a = int(input("Enter a string: "))
+b = int(input("Enter a string: "))
+c = int(input("Enter a string: "))
+
+def average(a,b,c):
+    return (a + b + c) / 3
+print(f"The average of the three strings is {int(average(a,b,c))} ") 
+output:-
+Enter a string: 50
+Enter a string: 40
+Enter a string: 80
+The average of the three strings is 56
+
