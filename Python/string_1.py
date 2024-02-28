@@ -23,7 +23,7 @@ print(s.lower()) #lowercase
 print(s.replace('o', '*')) #replace  all o with *
 print(s.split()) #convert to a list
 print(s[2])  #indexing
-print(s[2:8]) #slicing
+print(s[2:8]) #slicing string_name[start:end:step] step default value is 1
 
 
 
