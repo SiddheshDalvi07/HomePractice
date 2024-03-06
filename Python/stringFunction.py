@@ -33,14 +33,17 @@ print("strip : ",s.strip())
 # print(ss)
 
 s="Itvedant"
-print("Index -  Character")
-for i in range(0,len(s),1):
-      print(i,"      -     ",s[i])
+# print("Index -  Character")
+# for i in range(0,len(s),1): 
+#       print(i,"      -     ",s[i])
 
-s1="Itvedant"
-print("Character")
-for x in s1:    
-      print(x)
+# s1="Itvedant"
+# print("Character")
+# for x in s1:    
+#       print(x)
 
 
+l=len(s)//2
+m=s[l]
+print(m)
 
