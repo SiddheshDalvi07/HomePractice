@@ -7,22 +7,23 @@
 </head>
 <body>
     <script>
-        let n = parseInt(prompt("enter the number:"))
-
-        for(let i=1;i<=n;i++){
-            if(i%3==0 & i%5==0){
-                console.log("foobar")
-            }
-            else if(i%3==0) {
-                console.log("foo");  
-            } 
-            else if (i%5 == 0) {
-                console.log("bar");
-            }
-            else{
-                console.log(i)
-            }
+   
+   function foobar(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("foobar");
+        } else if (i % 3 == 0) {
+            console.log('foo');
+        } else if (i % 5 == 0) {
+            console.log('bar');
+        } else {
+            console.log(i);
         }
+    }
+}
+
+let n = parseInt(prompt("Enter the number"));
+foobar(n);
     </script>
 </body>
 </html>

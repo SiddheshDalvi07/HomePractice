@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        console.log(prime(parseInt(prompt("Enter a positive integer"))));
+       
 
         function prime(n){
             if (isNaN(n) || n <= 1 ) {
@@ -28,6 +28,8 @@
              return `${n} is a prime number`
         }
     }
+    let n = parseInt(prompt("Enter a positive integer"));
+    console.log(prime(n))
     </script>
 </body>
 </html>
