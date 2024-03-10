@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function armstrong(n){
+        // let digit = n.toString().length; 
+        let numString= n.toString()
+        let digit = numString.length
+        let temp = n;
+        let sum = 0;
+        // while(temp>0){
+        //     let digits  = temp%10;
+        //     sum +=  Math.pow(digits,digit);
+        //     temp = parseInt(temp/10);
+        // }
+
+        for(let  i=0 ;i<digit;i++){
+            let digits = parseInt(numString[i])
+            sum+=Math.pow(digits ,digit);
+        }
+        return sum === n
+       } 
+
+       let  num = parseInt(prompt("Enter a number:"));
+       if (armstrong(num)) {
+           alert(`${num} is an Armstrong number`);
+       } else{
+        alert(`${num} is  not an Armstrong number`);
+       }
+    </script>
+</body>
+</html>
