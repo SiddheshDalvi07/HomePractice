@@ -45,3 +45,44 @@ r1=s1.intersection(s2)
 r1=s1&s2
 print(r1)
 
+s3={1,2,3,4,5,6,7,8,9}
+s4={7,8,9}
+
+#s4 is a part of s3
+print(s4.issubset(s3))
+
+#s3 is a part of s4
+print(s3.issuperset(s4))
+
+s4.add(12)
+print(s4)
+
+s4.update([12,13,14])
+print(s4)
+
+s4.remove(12)
+print(s4)
+
+s4.discard(9)
+print(s4)
+
+col1 ={"red","blue","green"}
+col2 ={"purple","cyan","yellow"}
+print(col1.union(col2))
+
+n1 = {10 ,20 ,30}
+
+n2 = {20, 40, 50}
+
+print(n1.intersection(n2))
+
+
+a1={10,20,30,40,60}
+a2={20,40,50}
+
+
+a1.difference_update(a2)
+print(a1)
+
+a1.clear()
+print(a1)
