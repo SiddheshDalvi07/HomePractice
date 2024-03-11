@@ -57,3 +57,109 @@ print(d3)
 d3=dict(d1,**d2)
 print(d3)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dd1={"name":"siddhesh","age":24,"city":"Mumbai"}
+print(dd1,type(dd1))
+
+dd2=dict((('a',1),('b',2),('c',3)))
+print(dd2)
+
+dd3={}
+print(type(dd3))
+
+employee={"name":"siddhesh","ANTI":"AVAST","age":30, "salary":50000}
+print("Employee Name: ", employee["name"])
+
+dd4={101:'John', 102:'Alice', 103:'Bob', 104: 'Charlie'}
+
+value = dd4.setdefault(103,'Bobby')
+print(value)
+
+x = dd4.setdefault(105,'Bobby')
+print(x)
+
+x2 = dd4.setdefault(106)  #if value not assigned then it will give output as None
+print(x2)
+
+dd4.clear()
+print(dd4)
+
+dd4 = employee.copy()
+print(dd4)
+
+dd4 = {**employee}   #unpacking the dictionary into a new dictionary
+print(dd4)
+
+a = [1,2,3]
+b= ["siddhesh","dalvi"]
+
+print(dict.fromkeys(a,b)) #from keys of one list with values from another list with pair
+
+dd4.items()
+print(dd4)
+
+dd4.get(101,"Not Found")
+#print(dd4[101])    #will raise error if key is not found in dict
+
+key = "age"
+val = employee.get(key)
+print(f"{key}: {val}")
+
+key = "city"
+val = employee.get(key, "City Not Found")
+print(f"{key}: {val}")
+
+age = employee.get("age")
+print("Age: {}".format(age))    
+
+print(employee.get("name"))
+
+print(employee.pop("age"))       #removes and returns the value of given key
+print(employee)                              #If Key not present gives KeyError
+
+print(employee.popitem()) #REMOVE LAST  ITEM AND RETURN IT AS DICTITEM  (KEY , VALUE)
+print(employee)
+
+employee.update({"gender":"male"})
+print(employee)
+
+print(employee.values())

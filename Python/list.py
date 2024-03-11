@@ -154,10 +154,10 @@ a = [ [2, 4, 6, 8 ],
     [ 8, 6, 4, 2 ],  
     [ 7, 5, 3, 1 ] ]  
           
-# for i in range(len(a)) :  
-#     for j in range(len(a[i])):
-#         print(a[i][j],end=" ")
-#     print()
+for i in range(len(a)) :  
+    for j in range(len(a[i])):
+        print(a[i][j],end=" ")
+    print()
 
 for row in a:
     print(*row) # * operator is used to unpack the elements of the iterable (here it's a row from 'a') into positional
@@ -177,6 +177,6 @@ a = [ [2, 4, 6, 8 ],
     [ 8, 6, 4, 2 ],  
     [ 7, 5, 3, 1 ] ]  
 
-print(a[1][3]) # a[column][row] column = list as a index , row = index of an element inside the list
+print(a[1][3]) #  a[row][column]  row =  list as a index ,column = index of an element inside the list 
 
 print(a[2][1])
