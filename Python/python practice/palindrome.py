@@ -12,4 +12,21 @@ if isPalindrome == True:
 else:
     print ("The given word is not a Palindrome")
 
- 
+
+
+# def is_palindrome(word):
+#     length = len(word)
+#     is_palindrome = True
+
+#     for i in range(0, (length // 2)):
+#         if word[i] != word[length - 1 - i]:
+#             is_palindrome = False
+#             break  # to stop checking further as we know that it's not a palindrome.
+
+#     return is_palindrome
+
+# word = input("Enter the word: ")
+# if is_palindrome(word):
+#     print("The given word is a Palindrome.")
+# else:
+#     print("The given word is not a Palindrome.")
