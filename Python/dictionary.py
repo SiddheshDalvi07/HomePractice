@@ -58,11 +58,22 @@ d3=dict(d1,**d2)
 print(d3)
 
 
+d7=dict({"name":"sid", "age":4})
+print(d7,type(d7))
 
 
+empty = {}
+print(empty)
 
 
+d7.pop("name")
+print(d7)
 
+d8= dict(((2,'a'), (5,'b')))  #using tuple as a parameter
+print(d8)
+
+d8.popitem()
+print(d8)
 
 
 
@@ -129,8 +140,8 @@ print(dd4)
 dd4 = {**employee}   #unpacking the dictionary into a new dictionary
 print(dd4)
 
-a = [1,2,3]
-b= ["siddhesh","dalvi"]
+a = [1,2,3] #keys
+b= ["siddhesh","dalvi"] #values
 
 print(dict.fromkeys(a,b)) #from keys of one list with values from another list with pair
 
@@ -140,8 +151,8 @@ print(dd4)
 dd4.get(101,"Not Found")
 #print(dd4[101])    #will raise error if key is not found in dict
 
-key = "age"
-val = employee.get(key)
+key = "village"
+val = employee.get(key,"Village not found")
 print(f"{key}: {val}")
 
 key = "city"
