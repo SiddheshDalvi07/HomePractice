@@ -68,3 +68,4 @@ def mul1(*args):
     print(m)
 
 mul1(10,20,30)
+
