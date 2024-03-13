@@ -180,3 +180,5 @@ a = [ [2, 4, 6, 8 ],
 print(a[1][3]) #  a[row][column]  row =  list as a index ,column = index of an element inside the list 
 
 print(a[2][1])
+
+

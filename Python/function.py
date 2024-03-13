@@ -105,8 +105,10 @@ func3(20,34,54,6576,75,45)
 #global varible
 #it is a variable which belongs to the script and not function.
 g_var = "I am global"
-print(g_var)
+def func4():
+    print(g_var,"inside function")
 
+func4()
 
 
 #local variable
@@ -140,5 +142,80 @@ def unique_list(l):
     return  new_list
 
 print(unique_list([1,2,3,1,2,3,4,5,3,3,3,3,4,5,4,6,]))
+
+def unq_list(l):
+    new_list=[]
+    new_list1 = [i for i in l if i not in new_list]
+    return (new_list1)
+
+print(unq_list([1,2,3,"python","java",1,2,3,4,5]))   #it will add all the non-duplicate element to the list
+
+#lambda function
+#lambda function is small anonymous function 
+#it can take any number of arguments but can only have one expression
+
+add = lambda x , y :x + y
+print(add(5,7))
+
+x = lambda a:a+10
+y = lambda a:a-10
+print(x(8),y(8))
+
+my_list=[1,2,3,4,5,6,7,8,9,10]
+new_list = list(filter(lambda x:(x%2==0),my_list))
+print(new_list)
+
+#Make an iterator that computes the function using arguments from each of the iterables. Stops when the shortest iterable is exhausted.
+my_list1=[1,2,3,4,5,6,7,8,9,10]
+new_list1 = list(filter(lambda x:(x%3==0),my_list1))
+print(new_list1)
+
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_list = []
+
+for x in my_list:
+    if x % 2 == 0:
+        new_list.append(x)
+
+print(new_list)
+
+
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new_list = [x for x in my_list if x % 2 == 0]
+print(new_list)
+
+
+my_pets = ['alfred', 'tabitha', 'william', 'arla']
+uppered_pets = []
+
+for pet in my_pets:
+    uppered_pets.append(pet.upper())
+
+print(uppered_pets)
+
+
+#map function Make an iterator that computes the function using arguments from each of the iterables. Stops when the shortest iterable is exhausted
+my_pets = ['alfred', 'tabitha', 'william', 'arla']
+
+uppered_pets = list(map(str.upper, my_pets))
+
+print(uppered_pets)
+
+
+
+
+#reduce funtion -- Apply a function of two arguments cumulatively to the items of a sequence or iterable, from left to right, so as to reduce the iterable to a single value.
+from functools import reduce
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers)
+print(result)
+
+
 
 
