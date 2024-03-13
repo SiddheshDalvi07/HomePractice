@@ -30,3 +30,14 @@ else:
 #     print("The given word is a Palindrome.")
 # else:
 #     print("The given word is not a Palindrome.")
+    
+
+
+
+user_input = input("Enter a list of words separated by spaces: ")
+words = user_input.split()
+
+palindromes = list(filter(lambda word: word == word[::-1], words))
+
+print(palindromes,type(palindromes))
+
