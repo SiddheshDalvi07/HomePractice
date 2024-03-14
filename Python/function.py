@@ -37,6 +37,10 @@ def calc(a,b):
 
 print(calc(10,5),type(calc))  
 print(type(calc(10,5)))  
+print("add",calc(10,5)[0])
+print("sub",calc(10,5)[1])
+print("mul",calc(10,5)[2])
+print("div",calc(10,5)[3])
 
 
 def student(name,age):
@@ -81,7 +85,7 @@ func(10,30)
 def func1(a,b):
     print(a,b)
 
-func1(a=10, b=30)
+func1(b=10, a=30)
 
 #default argument value
 #if we don't pass any value to this argument then it will take default value 
@@ -91,8 +95,10 @@ def func2(a,b=10):
 
 func2(20)
 
+#arbitrary argument
 #variable length argument
 #we can use * before the name of the variable
+#arbitrary positional arguments (*args):
 
 def func3(*args):
     s=0
@@ -100,7 +106,34 @@ def func3(*args):
         s+=i
     return s
 
-func3(20,34,54,6576,75,45)
+func
+
+#arbitrary keyword arguments (**kwargs)
+def percentage(**kwargs):
+
+    sum = 0
+
+    for sub in kwargs:
+
+        # get argument name
+
+        sub_name = sub
+
+        # get argument value
+
+        sub_marks = kwargs[sub]
+
+        print(sub_name, "=", sub_marks)
+
+        _ = dict(kwargs)
+
+    print(_)
+
+# pass multiple keyword arguments
+
+percentage(math=56, english=61, science=73)
+
+
 
 #global varible
 #it is a variable which belongs to the script and not function.
@@ -129,7 +162,7 @@ def max_num(a,b):
 print(max_num(20,40))
 
 
-unique_list = set((1,1,1,1,1,2,2,2,2,2,3,3,3,3,4,4,4,4,4))
+unique_list = list(set((1,1,1,1,1,2,2,2,2,2,3,3,3,3,4,4,4,4,4)))
 print((unique_list)) #number of unique elements in list
                              #set() will remove duplicates from the list
 
@@ -144,11 +177,9 @@ def unique_list(l):
 print(unique_list([1,2,3,1,2,3,4,5,3,3,3,3,4,5,4,6,]))
 
 def unq_list(l):
-    new_list=[]
-    new_list1 = [i for i in l if i not in new_list]
-    return (new_list1)
+    return list(set(l))
 
-print(unq_list([1,2,3,"python","java",1,2,3,4,5]))   #it will add all the non-duplicate element to the list
+print(unq_list([1,2,3,1,2,3,4,5,"python","java"]))   #it will add all the non-duplicate element to the list
 
 #lambda function
 #lambda function is small anonymous function 
@@ -217,5 +248,9 @@ result = reduce(custom_sum, numbers)
 print(result)
 
 
-
+lis = [1, 3, 5, 6, 2] 
+  
+# using reduce to compute sum of list 
+print("The sum of the list elements is : ", end="") 
+print(reduce(lambda a,b: a+b, lis)) 
 
