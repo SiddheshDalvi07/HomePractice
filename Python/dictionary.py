@@ -174,3 +174,10 @@ employee.update({"gender":"male"})
 print(employee)
 
 print(employee.values())
+
+print(employee.keys())
+
+print(list(employee.items()))
+
+print(employee.items())
+
