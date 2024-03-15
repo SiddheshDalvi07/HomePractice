@@ -55,10 +55,22 @@ print(list4)
 
 def fact(n):
     if n == 0 or n == 1:
-        return 1
+        return 1                          #to stop infinite loop
     else:
         return n * fact(n-1)
         
 print(fact(5))
+
+
+##recursive function
+def count(n):
+    print(n)
+    if n == 10:
+        return n                 #to stop infinite loop
+    else:
+        return count(n + 1)
+
+
+count(1)
 
 
