@@ -29,7 +29,7 @@ print("Odd List : ", odd_list)
 
 from functools import reduce
 my_list=[1,2,3,4,5,6,7,8,9,10]
-sum_list=reduce(lambda x,y:x+y,my_list)
+sum_list=reduce(lambda x,y:x+y,my_list) 
 print("Sum of the elements in the list is :", sum_list)
 
 my_list=[1,2,3,4,5,6,7,8,9,10]
