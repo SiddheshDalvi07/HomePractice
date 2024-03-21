@@ -106,7 +106,7 @@ def func3(*args):
         s+=i
     return s
 
-func
+func3(5,6,7,8,9)
 
 #arbitrary keyword arguments (**kwargs)
 def percentage(**kwargs):
