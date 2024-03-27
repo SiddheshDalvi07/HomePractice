@@ -28,7 +28,7 @@ print(c1.wheels)
 #we can access class method takes self as argument, it belong to object
 
 #2. class methods - takes cls as first argument, it belongs to class
-#we can access class variables using class method, to access classmethods we use class.methodname
+#we can access classmethods we use class.methodname
 
 #3.static method does not take any argument 
 
