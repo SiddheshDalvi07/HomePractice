@@ -61,10 +61,11 @@ if os.path.isfile('example4.txt'):
 else:
     print ("File does not exist")
 
-"""dictionary
+"""
+
+dictionary
 if else 
 for loop
-
 functions
 
 revise for django 
