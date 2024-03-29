@@ -41,6 +41,7 @@ print(f.read())
 f.close()
 
 #x mode 
+#if the file is not present then it will create the file
 # if the file is already present then it will raise an error
 
 # f =  open("example3.txt", "x")
