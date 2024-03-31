@@ -1,0 +1,31 @@
+Serialization:
+Serialization refers to the process of converting a data structure or object into a format that can be easily stored or transmitted. This format is typically a stream of bytes. Serialization is often used when data needs to be persisted to disk or transmitted over a network. The serialized data can be stored in files, sent over the network, or stored in a database.
+
+Example:
+Consider a Python dictionary that contains some data:
+data = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+To serialize this dictionary, you might convert it into a JSON string:
+import json
+
+serialized_data = json.dumps(data)
+print("Serialized data:", serialized_data)
+
+Output:
+Serialized data: {"name": "John", "age": 30, "city": "New York"}
+
+Now serialized_data contains a JSON string representing the dictionary. This string can be easily stored in a file or transmitted over a network.
+
+Deserialization:
+Deserialization is the process of reconstructing the original data structure or object from its serialized form. It involves reading the serialized data and converting it back into its original form. Deserialization is often used when retrieving data that has been stored or transmitted in a serialized format.
+
+Example:
+Continuing from the previous example, let's deserialize the JSON string back into a Python dictionary:
+deserialized_data = json.loads(serialized_data)
+print("Deserialized data:", deserialized_data)
+
+Output:
+Deserialized data: {'name': 'John', 'age': 30, 'city': 'New York'}
+Now deserialized_data contains the original Python dictionary reconstructed from the serialized JSON string.
+
+In summary, serialization and deserialization are essential techniques for converting data into a format that can be easily stored, transmitted, and reconstructed later, and they are widely used in various areas of computer science and software engineering.

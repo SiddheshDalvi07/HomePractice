@@ -1,0 +1,20 @@
+A file is a collection of data stored in a storage device, typically on a disk or in memory, identified by a filename. Files are used to store and organize data in a structured manner for various purposes such as storing documents, images, videos, configuration settings, code, and more.
+
+In computer programming, files are accessed and manipulated using file handling operations provided by programming languages and operating systems. These operations include creating, opening, reading from, writing to, closing, and deleting files.
+
+Modes of Files:
+File modes determine the type of operations that can be performed on a file. Different programming languages and operating systems may have variations in file modes, but the basic modes are quite common across various systems. Here are the commonly used file modes:
+
+1. Read mode ('r'): Opens a file for reading. If the file does not exist or cannot be opened, it raises a FileNotFoundError. This mode is used when you only want to read data from a file and not modify it.
+
+2. Write mode ('w'): Opens a file for writing. If the file does not exist, it creates a new file. If the file exists, it truncates the file to zero length. This mode is used to write data to a file. If the file exists, its previous content is overwritten.
+
+3. Append mode ('a'): Opens a file for appending. If the file does not exist, it creates a new file. If the file exists, it appends data to the end of the file. This mode is used when you want to add data to a file without overwriting its existing content.
+
+4. Read and Write mode ('r+'): Opens a file for both reading and writing. If the file does not exist, it raises a FileNotFoundError. This mode allows you to read from and write to the file.
+
+5. Write and Read mode ('w+'): Opens a file for both reading and writing. If the file does not exist, it creates a new file. If the file exists, it truncates the file to zero length. This mode allows you to read from and write to the file.
+
+6. Append and Read mode ('a+'): Opens a file for both appending and reading. If the file does not exist, it creates a new file. This mode allows you to read from and append to the file.
+
+These modes can be combined with additional characters to enable features like binary mode ('b' for binary) or exclusive creation ('x' for exclusive creation, which fails if the file already exists).
