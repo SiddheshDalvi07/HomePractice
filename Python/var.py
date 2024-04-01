@@ -113,3 +113,86 @@ a4 = Age("sid",23)
 Age.checkAge(a4.age)
 
 #to pass parameter in static method to access instance variable we use objectname.instancevariable
+
+class Student:
+
+  institute="Itvedant"#static variable(class level variable)
+
+  def set_info(self,name,age,marks):#method,to refer current object
+
+       self.name=name
+
+       self.age=age
+
+       self.Marks=marks
+
+  def get_info(self):
+
+        print("name",self.name)
+
+        print("age",self.age)
+
+        print("marks",self.Marks)
+
+        print("Institute",Student.institute)
+
+
+
+  @classmethod
+
+  def set_name(cls):
+
+        cls.institute ="Itvedant education "
+
+
+
+
+
+#before calling class method      
+
+s1=Student()
+
+s1.set_info("Meera",20,95)
+
+s1.get_info()
+
+s2=Student()
+
+s2.set_info("mayank",21,70)
+
+s2.get_info()
+
+#after calling class method  
+
+Student.set_name()#calling class method
+
+s2.get_info()
+
+s1.get_info()
+
+
+
+
+
+
+
+
+
+class Student:
+
+  def __init__(self,name,age,marks):#method,to refer current object
+
+       self.name=name
+
+       self.age=age
+
+       self.Marks=marks
+
+       print(self.name, self.age, self.Marks)
+
+  def __del__(self):
+
+      print("destructed called,class got deleted")   
+  
+stud = Student("Sid",24,95)
+del stud
