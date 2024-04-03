@@ -5,3 +5,9 @@ from django.http import HttpResponse
 
 def  index(request):
     return HttpResponse('hello world')
+
+def about(request):
+    return HttpResponse("about page")
+
+def contact(request):
+    return render(request,"index.html")

@@ -1,0 +1,16 @@
+home page --> navbar, footer, main section (sidebar, products)
+login page
+register page 
+see details page
+cart page
+order page 
+payment page
+
+
+database sqlite
+
+
+payment
+razorpay
+
+gmail intergration
