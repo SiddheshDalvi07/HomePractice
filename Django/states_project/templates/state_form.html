@@ -1,0 +1,17 @@
+<!-- states/templates/states/state_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Update{% else %}Create{% endif %} State</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Update{% else %}Create{% endif %} State</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

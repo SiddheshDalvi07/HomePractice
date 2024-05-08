@@ -1,0 +1,21 @@
+<!-- states/templates/states/state_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.name }} Details</title>
+</head>
+<body>
+    <h1>{{ object.name }} Details</h1>
+    <p>Population: {{ object.population }}</p>
+    <p>Language: {{ object.language }}</p>
+    <p>Capital: {{ object.capital }}</p>
+    <a href="{% url 'state-update' object.pk %}">Update</a>
+    <form action="{% url 'state-delete' object.pk %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'state-list' %}">Back to State List</a>
+</body>
+</html>
