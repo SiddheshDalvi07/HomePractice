@@ -1,0 +1,39 @@
+<!-- media_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media List</title>
+</head>
+<body>
+    <h1>Media List</h1>
+
+    <h2>Audio Files</h2>
+    <ul>
+    {% for audio_file in audio_files %}
+        <li>{{ audio_file.name }} - Type: {{ audio_file.type }} - Format: {{ audio_file.format }} - Size: {{ audio_file.size }} MB - Duration: {{ audio_file.duration_secs }} seconds</li>
+    {% empty %}
+        <li>No audio files found.</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Video Files</h2>
+    <ul>
+    {% for video_file in video_files %}
+        <li>{{ video_file.name }} - Type: {{ video_file.type }} - Format: {{ video_file.format }} - Size: {{ video_file.size }} MB - Duration: {{ video_file.duration_secs }} seconds</li>
+    {% empty %}
+        <li>No video files found.</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Image Files</h2>
+    <ul>
+    {% for image_file in image_files %}
+        <li>{{ image_file.name }} - Type: {{ image_file.type }} - Format: {{ image_file.format }} - Size: {{ image_file.size }} MB</li>
+    {% empty %}
+        <li>No image files found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
