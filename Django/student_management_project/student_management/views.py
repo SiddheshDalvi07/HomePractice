@@ -26,3 +26,6 @@ class StudentDeleteView(DeleteView):
     success_url = reverse_lazy('student_list')
     template_name = 'student_confirm_delete.html'
 
+def service(request):
+    return render(request,"service.html")
+
