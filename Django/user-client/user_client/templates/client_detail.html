@@ -1,0 +1,24 @@
+<!-- templates/client_detail.html -->
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Client Detail{% endblock %}
+
+{% block content %}
+<h2>{{ client.name }}</h2>
+<p>Email: {{ client.email }}</p>
+<p>Phone: {{ client.phone }}</p>
+<p>Address: {{ client.address }}</p>
+<a href="{% url 'client_update' client.id %}" class="btn btn-warning">Edit</a>
+<form action="{% url 'client_delete' client.id %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+<h3>Projects</h3>
+<a href="{% url 'project_create' %}" class="btn btn-primary mb-2">Add New Project</a>
+<ul>
+    {% for project in client.projects.all %}
+    <li>{{ project.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
