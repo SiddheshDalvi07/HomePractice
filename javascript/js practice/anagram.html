@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function anagram(str1,str2) {
+        //     let str1Array = str1.toLowerCase().split('').sort().join('');
+        //     let str2Array = str2.toLowerCase().split('').sort().join('');
+        //     return str1Array === str2Array;
+
+
+        // };
+
+        function anagram(str1, str2) {
+            let len1 = str1.length
+            let len2 = str2.length
+            if (len1 != len2) {
+                return false
+            }
+            else {
+                s1 = str1.toLowerCase().split().sort().join()
+                s2 = str2.toLowerCase().split().sort().join()
+                for (i = 0; i < len1; i++) {
+                    if (s1[i] != s2[i]) {
+                        return false
+                    }
+                }
+                return true
+
+            }
+
+        }
+
+        str1 = prompt("enter the word 1")
+        str2 = prompt("enter the word 2")
+        anagram(str1, str2)
+        if (anagram(str1, str2)) {
+            console.log("anagram")
+        }
+        else {
+            console.log("not anagram")
+        }
+
+       
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
