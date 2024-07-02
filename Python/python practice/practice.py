@@ -57,20 +57,33 @@
 # n = int(input("Enter the number: "))
 # print(f'The factorial of {n} is {factorial(n)}')
 
-def fibonaci(n):
-    n1 = 0
-    n2 = 1
-    temp = 0
-    print(n1)
-    print(n2)
-    for i in range(1,n):
-        # temp = n1 + n2
-        # n1 = n2
-        # n2 = temp
-        print(i)     
+# def fibonaci(n):
+#     n1 = 0
+#     n2 = 1
+#     temp = 0
+#     print(n1)
+#     print(n2)
+#     for i in range(1,n):
+#         temp = n1 + n2
+#         n1 = n2
+#         n2 = temp
+#         print(temp)     
 
-n = int(input("Enter the number: "))
-fibonaci(n)
+# n = int(input("Enter the number: "))
+# fibonaci(n)
+
+# def palindrome(str):
+#     str=str.lower()
+#     length = len(str)
+#     ispalindrome = "It is palindrome"
+#     for i in range(length//2):
+#         if str[i]!=str[length-i-1]:
+#             ispalindrome= "It is not a palindrome"
+#             break
+#     return ispalindrome
+
+# str = input("enter the string: ")
+# print(palindrome(str))
 
 
 
