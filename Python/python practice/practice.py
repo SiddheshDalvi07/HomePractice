@@ -100,7 +100,7 @@
 # foobar(n)
 
 
-def prime(n):
-    
+# def prime(n):
+
 
 
