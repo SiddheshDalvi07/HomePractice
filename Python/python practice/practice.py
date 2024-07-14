@@ -100,7 +100,60 @@
 # foobar(n)
 
 
+# def anagram(str1,str2):
+#     str1=str1.lower()
+#     str2=str2.lower()
+#     if len(str1)!=len(str2):
+#         return False
+    
+#     count1 = {}
+#     count2 = {}
+
+#     for char in str1:
+#         if char in count1:
+#             count1[char]+=1
+#         else:
+#             count1[char]=1
+
+#     for char in str2:
+#         if char in count2:
+#             count2[char]+=1
+#         else:
+#             count2[char]=1
+    
+#     return count1 == count2
+
+# str1 = input("enter the string 1: ")
+# str2 = input("enter the string 2: ")
+
+# if anagram(str1,str2):
+#     print("anagram")
+# else:
+#     print("not anagram")
+
+
 # def prime(n):
+#     if n<=1:
+#         return False
+#     elif n==2:
+#         return True
+#     else:
+#         for i in range(2,n):
+#             if n%i==0:
+#                 return False
+#         return True
+        
+# n = int(input("Enter the number: "))
+# if prime(n):
+#     print("prime")
+# else:
+#     print("not prime")
+
+    
+# print("Prime numbers between 1 and 100:")
+# for number in range(1, 101):
+#     if prime(number):
+#         print(number, end=" ")    
 
 
 
