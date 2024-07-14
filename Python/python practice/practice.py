@@ -155,5 +155,46 @@
 #     if prime(number):
 #         print(number, end=" ")    
 
+# arr = [1,22,45,67,88]
+
+# x = 45
+
+# def linear(arr,x):
+#     for i in range(len(arr)):
+#         if arr[i] == x:
+#             return i
+#     return -1
+
+# print(f'element {x} is present at index {linear(arr,x)}')
+
+# def binary(arr,x):
+
+#     low = 0 
+#     high = len(arr)-1
+#     mid = 0 
 
 
+#     while low <= high:
+
+#         mid = (high+low) // 2
+
+#         if arr[mid] < x :
+#             low = mid + 1
+
+#         elif arr[mid] > x :
+#             high = mid - 1
+
+#         else:
+#             return mid
+        
+#     return - 1
+
+
+# arr = [23,34,1,34,55]
+# x = 1
+
+
+# if binary(arr,x) != -1:
+#     print("Element is present at index",binary(arr,x))
+# else:
+#     print("Element is not present in array")
