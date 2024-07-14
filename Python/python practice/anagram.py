@@ -24,41 +24,36 @@ else:
 
 #without function 
 
-def are_anagrams(string1, string2):
-    # Convert both strings to lowercase (to make the check case-insensitive)
+def anagrams(string1, string2):
+    
     string1 = string1.lower()
     string2 = string2.lower()
 
-    # Check if lengths are the same
     if len(string1) != len(string2):
         return False
     
-    # Initialize dictionaries to count character occurrences
     count1 = {}
     count2 = {}
 
-    # Count characters in the first string
     for char in string1:
         if char in count1:
             count1[char] += 1
         else:
             count1[char] = 1
 
-    # Count characters in the second string
     for char in string2:
         if char in count2:
             count2[char] += 1
         else:
             count2[char] = 1
 
-    # Compare the two dictionaries
     return count1 == count2
 
-# Example usage
+
 string1 = "listen"
 string2 = "silent"
 
-if are_anagrams(string1, string2):
+if anagrams(string1, string2):
     print(f'"{string1}" and "{string2}" are anagrams.')
 else:
     print(f'"{string1}" and "{string2}" are not anagrams.')
