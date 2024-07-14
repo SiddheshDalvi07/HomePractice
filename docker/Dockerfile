@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:19-alpine
 COPY . /app
 WORKDIR /app
 CMD node app.js
@@ -33,3 +33,10 @@ CMD node app.js
 
 #docker login
 #docker login -u username
+
+#docker network network_name
+#docker network ls
+
+
+#docker-compose -f mongo.yaml up -d   -f file, up - all the container in mongo.yaml
+#docker-compose -f mongo.yaml down   -f file, down - to stop all the container in mongo.yaml
