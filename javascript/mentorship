@@ -1,0 +1,125 @@
+//objects
+
+let car1 = {
+    brand:"BMW",
+    name:"siddhesh",
+    getBrand:function(){
+        console.log(`You drive ${this.brand}`)
+    }
+}
+console.log(car1.name)
+console.log(car1.brand)
+car1.getBrand()
+
+let car2 = {
+    brand:"mercedes",
+    getBrand:function(){
+        console.log(`You drive ${this.brand}`)
+    }
+}
+
+car2.getBrand()
+car2.brand
+
+
+
+
+// callback
+
+hello(bye)
+
+function hello(callback){
+  setTimeout(() => {
+    console.log("hello")
+    callback()
+  }, 3000);
+}
+
+function bye(){
+    console.log("bye")
+}
+
+//nested callbacks
+
+function wakeup(callback){
+    setTimeout(() => {
+      console.log("wakeup")
+      callback()
+    }, 1000);
+  }
+
+function brushteeth(callback){
+    setTimeout(() => {
+      console.log("brushteeth")
+      callback()
+    }, 1000);
+  }
+
+
+function walkdog(callback){
+    setTimeout(() => {
+      console.log("walkdog")
+      callback()
+    }, 1000);
+  }
+
+
+function eatbreakfast(callback){
+    setTimeout(() => {
+      console.log("eatbreakfast")
+      callback()
+    }, 1000);
+  }
+
+
+function gottocollege(callback){
+    setTimeout(() => {
+      console.log("gottocollege")
+      callback()
+    }, 1000);
+  }
+
+function startday(){
+    wakeup(()=>{
+        brushteeth(()=>{
+            walkdog(()=>{
+                eatbreakfast(()=>{
+                    gottocollege(()=>{
+                        console.log("done for the day")
+                    })
+                })
+            })
+        })
+    })
+}
+
+
+startday()
+
+//map 
+
+let num = [1,2,3,4,5,6,7,8,9]
+
+let doubleNum = num.map((a)=>{
+    return a*2
+})
+console.log(doubleNum)
+
+
+let even = num.filter((a)=>{
+ return a % 2 == 0
+})
+
+console.log(even)
+
+let sum = num.reduce((accumulator,a)=>{
+    return accumulator+a
+   },0)
+   
+console.log(sum)   
+
+let mul = num.reduce((accumulator,a)=>{
+    return accumulator*a
+   },1)
+   
+console.log(mul)   
