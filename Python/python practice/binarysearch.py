@@ -10,17 +10,17 @@ def binary(arr,x):
 
         if arr[mid] < x:
             low = mid + 1
-
+            
         elif arr[mid] > x:
             high = mid - 1
-        
+            print (arr[mid])
         else:
             return mid
         
     return -1
 
-arr = [1,23,34,45,66]
-x = 1
+arr = [13,23,34,45,66]
+x = 13
 
 
 if binary(arr,x) != -1:
